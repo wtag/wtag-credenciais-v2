@@ -14,15 +14,15 @@
 > que cada número é o que é. O remote foi REMOVIDO, para ninguém empurrar um
 > commit do v2 para o repositório da concorrência.
 >
-> **O que esta cópia herdou da versão de concorrência**, e que precisa de
-> decisão antes de virar credencial institucional:
+> **O que esta cópia herdou do recorte da versão de concorrência**, e que
+> precisa de decisão antes de virar credencial institucional:
 >
-> - o ato de abertura institucional do grupo **não está aqui** — saiu por
->   conflito de interesse com o anunciante daquele pitch, motivo que não vale
->   para uma credencial institucional;
+> - ~~o ato de abertura institucional do grupo não está aqui~~ — **resolvido em
+>   29.09: o Ato 1 do Grupo WE voltou inteiro**, vindo do v1;
 > - o portfólio está recortado em **quatro clientes**; Sicredi e Odontoprev
->   saíram por causa daquele recorte;
-> - o deck **abre em inglês**, o que era exigência do pitch.
+>   ficaram de fora daquele recorte;
+> - ~~o deck abre em inglês~~ — **resolvido em 29.09: o padrão voltou a ser
+>   português**, e o seletor EN continua na tela.
 >
 > **O que nasceu na versão de concorrência e é para ficar:** a mandala
 > (`O Que Fazemos`), as telas `WT.INTELLIGENCE` e `Ferramentas`, as quatro capas

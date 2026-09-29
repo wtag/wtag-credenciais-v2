@@ -57,8 +57,9 @@ decisões de conteúdo pendentes, não bugs:
 2. **O portfólio está recortado em quatro clientes.** Sicredi e Odontoprev
    saíram por aquele recorte; Golden Lake já voltou. Os assets dos que saíram
    continuam no v1.
-3. **O deck abre em inglês**, o que era exigência do pitch. Para uso
-   institucional talvez o padrão deva voltar a ser português (ver §8).
+3. ~~O deck abre em inglês.~~ **Resolvido em 29.09: o padrão voltou a ser
+   português** e `iniciar()` aplica PT a cada carga, ignorando o
+   `localStorage` (ver §8). O seletor EN continua na tela.
 
 **O que nasceu na concorrência e é para ficar:** a mandala (`O Que Fazemos`), as
 telas `WT.INTELLIGENCE` e `Ferramentas`, as quatro capas de cliente sobre foto e
@@ -143,9 +144,9 @@ Ele é **público**. Estas já entraram uma vez e tiveram de ser purgadas do
 histórico com `git filter-branch`:
 
 - **`Claude outputs/`** — onde o app deixa os arquivos anexados. O briefing da
-  concorrência **não foi copiado para esta pasta**, de propósito: ele nomeia o
-  concorrente do anunciante daquele pitch e não tem função aqui. Se algum anexo
-  novo cair nessa pasta, ele não sobe.
+  concorrência **não foi copiado para esta pasta**, de propósito: é material
+  interno daquele pitch e não tem função aqui. Se algum anexo novo cair nessa
+  pasta, ele não sobe.
 - **`WT.AG_*.pdf`** — 17 MB de binário que muda inteiro a cada geração. O padrão
   no `.gitignore` é curinga de propósito: quando o arquivo passou de
   `Credenciais` para `Concorrencia`, a linha antiga com o nome fixo deixou de
@@ -298,12 +299,11 @@ WDI Consulting, Adhoc), cargo que já está em inglês, métrica em inglês.
 ## 9 · Onde está o briefing da concorrência
 
 Em `~/Projetos/wtag-concorrencia-2026/Claude outputs/`, **no disco e fora do
-git**, e **não foi copiado para cá**. Ele traz os direcionais daquele pitch e o
-conflito de interesse com nome e sobrenome.
+git**, e **não foi copiado para cá**. É material interno daquele pitch.
 
-Consulte-o se precisar entender **por que** a versão de concorrência cortou o
-que cortou — mas o v2 não é aquele pitch, e nada de lá deve ser commitado aqui
-nem repetido em arquivo versionado.
+Consulte-o no disco se precisar entender **por que** a versão de concorrência
+cortou o que cortou — mas o v2 não é aquele pitch, e nada de lá deve ser
+commitado aqui nem repetido em arquivo versionado.
 
 O v2 ainda **não tem briefing próprio**. Quando ele chegar, vale escrever as
 decisões neste arquivo em vez de deixá-las só na conversa.
