@@ -182,10 +182,10 @@
     btn.setAttribute('aria-label', para === 'pt' ? 'Switch to English' : 'Mudar para português');
   }
   btn.addEventListener('click', function () { traduzir(idioma === 'pt' ? 'en' : 'pt'); });
-  /* Mesma regra do deck: inglês TODA vez, e não "inglês se não houver nada
-     gravado". Lembrar a escolha faria um clique acidental em PT virar o padrão
+  /* Mesma regra do deck: português TODA vez, e não "português se não houver
+     nada gravado". Lembrar a escolha faria um clique acidental virar o padrão
      permanente daquele aparelho. */
-  traduzir('en');
+  traduzir('pt');
 
   window.MOBILE = { traduzir: traduzir, secoes: secs.length };
 })();

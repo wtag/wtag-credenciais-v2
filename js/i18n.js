@@ -188,20 +188,18 @@
     atualizarBotao();
   }
 
-  /* O deck abre SEMPRE em inglês. Não é "inglês por omissão": é inglês toda vez,
-     de propósito, ignorando o que estiver gravado.
-     A versão anterior lembrava a última escolha, e isso é uma armadilha num
-     pitch: basta alguém clicar em PT numa conferência — ou eu, testando — para
-     a máquina passar a abrir em português para sempre, sem aviso. O toggle
-     continua valendo durante a sessão; ele só não sobrevive ao recarregamento.
-     O localStorage continua sendo escrito pelo aplicar(), e serve ao mobile.html
-     e a quem quiser ler o estado; simplesmente não manda mais na abertura.
-     O HTML continua escrito em português e o data-pt continua guardando o
-     original na primeira troca: a fonte não mudou de idioma, só o padrão de
-     exibição. */
+  /* O deck abre SEMPRE em português. Não é "português por omissão": é português
+     toda vez, ignorando o que estiver gravado.
+     A regra de determinismo é a mesma que valia quando o padrão era inglês, e o
+     motivo também: se o deck lembrasse a última escolha, bastaria alguém clicar
+     no toggle uma vez para aquela máquina passar a abrir no outro idioma para
+     sempre, sem aviso. O que mudou foi só o idioma de abertura — esta versão é
+     institucional, e não o pitch em inglês.
+     O toggle continua valendo durante a sessão; ele só não sobrevive ao
+     recarregamento. */
   function iniciar() {
     montarBotao();
-    aplicar('en');
+    aplicar('pt');
   }
 
   if (document.readyState === 'loading') {

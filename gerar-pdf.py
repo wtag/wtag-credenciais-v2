@@ -342,8 +342,16 @@ def gerar(idioma, so_html=False):
     # A versão em português não carrega nada: o index.html JÁ é o português, e
     # é por isso que ela é a mais barata das duas.
     if en:
+        # O aplicar('en') EXPLÍCITO não é redundância: o iniciar() do deck aplica
+        # o idioma PADRÃO, que nesta versão é português. Enquanto o padrão era
+        # inglês, carregar os dois scripts bastava — e foi assim que o PDF em
+        # inglês quase saiu em português quando o padrão virou. Depender do
+        # padrão para escolher o idioma acopla duas decisões que não têm por que
+        # andar juntas.
         doc += ['<script src="js/i18n-dic.js?v=%s"></script>' % versao,
-                '<script src="js/i18n.js?v=%s"></script>' % versao]
+                '<script src="js/i18n.js?v=%s"></script>' % versao,
+                '<script>document.addEventListener("DOMContentLoaded",function(){'
+                'window.I18N && window.I18N.aplicar("en");});</script>']
     doc += ['</body>', '</html>', '']
     alvo = destino(idioma)
     io_escrever(alvo, '\n'.join(doc))
