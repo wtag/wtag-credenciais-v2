@@ -1,6 +1,6 @@
-# WT.AG · Credenciais 2026
+# WT.AG · Credenciais v2
 
-Apresentação de credenciais da WT.AG em HTML, 26 slides, palco fixo de 1920×1080
+Apresentação de credenciais da WT.AG em HTML, 31 slides, palco fixo de 1920×1080
 escalado para caber na janela. Sem build, sem dependência: é abrir o
 `index.html` no navegador.
 

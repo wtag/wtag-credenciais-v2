@@ -1,32 +1,37 @@
-# WT.AG — Concorrência 2026 · deck HTML
+# WT.AG — Credenciais v2 · deck HTML
 
-> **Este projeto é uma bifurcação do deck de credenciais**
-> (`wtag-credenciais-2026`), feita em 21.09 a partir dos direcionais do Lucas.
-> O deck de credenciais continua existindo, rodando e sendo mantido em separado:
-> nada aqui volta para lá.
+> **Este projeto é uma cópia da versão de concorrência**
+> (`wtag-concorrencia-2026`), tirada em 29.09 para ser a próxima credencial
+> institucional. As três versões convivem e são mantidas em separado:
 >
-> **O que difere do deck de origem**
->
-> | | Credenciais | Concorrência |
+> | Versão | Pasta | O que é |
 > |---|---|---|
-> | Público | institucional | pitch para um anunciante |
-> | Idioma padrão | português | **inglês** (o toggle PT continua) |
-> | Telas | 31 | 29 |
-> | Abertura institucional do grupo | abre o deck | **fora** desta versão |
-> | Cases | dez | **oito**, agrupados por cliente, cada um com capa |
-> | Time | duas telas (Liderança · O Time) | **uma**, com o número de 140 |
+> | **Credenciais v1** | `wtag-credenciais-2026` | A primeira, publicada e no ar. **Somente leitura.** |
+> | **Credenciais · Concorrência 09.2026** | `wtag-concorrencia-2026` | O pitch para um anunciante, publicado. Congelado. |
+> | **Credenciais v2** | `wtag-credenciais-v2` | Esta. Sucessora do v1, partindo do recorte da concorrência. |
 >
-> **Telas que nasceram aqui:** `O Que Fazemos` (a mandala) e as quatro capas de
-> cliente (Magalu, Keeta, Bridgestone, Multiplan). A tela `Social First Agency`
-> foi reescrita: ela e a antiga `Lente × Escopo` viraram uma só.
+> **O histórico de commits veio junto**, de propósito: as mensagens explicam por
+> que cada número é o que é. O remote foi REMOVIDO, para ninguém empurrar um
+> commit do v2 para o repositório da concorrência.
 >
-> **Aviso sobre o que vem abaixo.** O corpo deste documento é o do deck de
-> origem e continua valendo para tudo que é design system — a métrica do
-> lettering, a constante `--cap-k`, a calibração dos logotipos, o diagnóstico do
-> `Range` no Safari. Mas ele cita telas, cases e numerações que **não existem
-> mais nesta versão** (a abertura do grupo, Sicredi, Odontoprev, Marcos Muniz).
-> Leia essas passagens como histórico do sistema, não como mapa deste deck. O
-> mapa deste deck é a tabela de atos mais abaixo, que está atualizada.
+> **O que esta cópia herdou da versão de concorrência**, e que precisa de
+> decisão antes de virar credencial institucional:
+>
+> - o ato de abertura institucional do grupo **não está aqui** — saiu por
+>   conflito de interesse com o anunciante daquele pitch, motivo que não vale
+>   para uma credencial institucional;
+> - o portfólio está recortado em **quatro clientes**; Sicredi e Odontoprev
+>   saíram por causa daquele recorte;
+> - o deck **abre em inglês**, o que era exigência do pitch.
+>
+> **O que nasceu na versão de concorrência e é para ficar:** a mandala
+> (`O Que Fazemos`), as telas `WT.INTELLIGENCE` e `Ferramentas`, as quatro capas
+> de cliente sobre foto e a tela única de `Nosso Time`.
+>
+> **Aviso sobre o que vem abaixo.** O corpo deste documento continua valendo
+> para tudo que é design system — a métrica do lettering, a constante
+> `--cap-k`, a calibração dos logotipos, o diagnóstico do `Range` no Safari.
+> Onde ele citar telas ou numerações, confira contra o `index.html`.
 
 Apresentação de slides em HTML, 1920×1080 (16:9), **funciona offline**: basta abrir
 `index.html` no navegador (Chrome ou Safari). Sem build, sem dependências.

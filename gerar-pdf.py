@@ -54,7 +54,7 @@ def destino(idioma):
 
 
 def caminho_pdf(idioma):
-    return os.path.join(AQUI, 'WT.AG_Concorrencia_2026_%s.pdf' % idioma.upper())
+    return os.path.join(AQUI, 'WT.AG_Credenciais_v2_%s.pdf' % idioma.upper())
 
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
@@ -67,7 +67,11 @@ EXCLUIR = ()   # todos os cases deste deck estão completos
 # para leitor de PDF, e não para o deck.
 SEM_CAPA = True
 
-DECK_ONLINE = 'https://wtag.github.io/wtag-concorrencia-2026/'
+# O v2 ainda não está publicado. Enquanto estiver vazio, os vídeos sem arquivo
+# no Drive ficam SEM link em vez de apontar para o deck de outra versão — um
+# link que leva ao deck errado é pior que link nenhum. Quando o v2 tiver URL,
+# basta preencher aqui.
+DECK_ONLINE = ''
 
 # ---------------------------------------------------------------- os vídeos
 # Os arquivos de alta já vivem no Drive, em _Assets/Videos-Alta — o deck usa
@@ -171,7 +175,7 @@ def ligar_videos(bloco, faltando, slide=None):
         # volta, que para quem lê um pitch vale mais que um .mp4 solto. O Drive
         # continua sendo o destino de quem quer o master.
         faltando.append(caminho)
-        if slide:
+        if slide and DECK_ONLINE:
             return tag + ancora('%s#slide-%02d' % (DECK_ONLINE, slide))
         return tag
 
@@ -350,8 +354,11 @@ def gerar(idioma, so_html=False):
     links = sum(p.count('class="pdf-lk"') for p in paginas)
     print('  links de vídeo: %d' % links)
     if faltando:
-        print('  %d vídeos sem arquivo no Drive — apontam para a tela do deck no ar'
-              % len(set(faltando)))
+        n = len(set(faltando))
+        if DECK_ONLINE:
+            print('  %d vídeos sem arquivo no Drive — apontam para a tela do deck no ar' % n)
+        else:
+            print('  %d vídeos sem arquivo no Drive e sem DECK_ONLINE: saem SEM link' % n)
     for a in sorted(set(avisos)):
         print('  ! %s' % a)
     fitas = sum(p.count('class="reperc__fita"') for p in paginas)

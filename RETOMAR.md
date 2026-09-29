@@ -1,4 +1,4 @@
-# RETOMAR AQUI — deck de concorrência WT.AG 2026
+# RETOMAR AQUI — Credenciais v2 (WT.AG)
 
 > **Para quem chega agora (outra sessão, outra conta).** Este arquivo é o
 > bastão. Leia-o inteiro antes de tocar em qualquer coisa: ele traz o estado
@@ -11,44 +11,58 @@
 
 ---
 
-## 1 · Regra zero: o projeto original é intocável
+## 1 · Regra zero: só se escreve nesta pasta
 
-Existem dois projetos:
+Existem **três** versões, e duas delas são intocáveis:
 
-| | Caminho | Uso |
+| Versão | Caminho | Situação |
 |---|---|---|
-| **ORIGINAL** | `~/Projetos/wtag-credenciais-2026` | Deck de credenciais institucional. **Somente leitura.** |
-| **ESTE** | `~/Projetos/wtag-concorrencia-2026` | Deck de concorrência. É onde se trabalha. |
+| **Credenciais v1** | `~/Projetos/wtag-credenciais-2026` | A primeira, publicada e no ar. **Somente leitura.** |
+| **Concorrência 09.2026** | `~/Projetos/wtag-concorrencia-2026` | O pitch, publicado e congelado. **Somente leitura.** |
+| **Credenciais v2** | `~/Projetos/wtag-credenciais-v2` | **Esta.** É onde se trabalha. |
 
-**Nenhum comando de escrita pode ter `wtag-credenciais-2026` no caminho de
-destino.** Nem `Write`, nem `Edit`, nem `sed -i`, nem `mv`, nem `rm`, nem `git`,
+**Nenhum comando de escrita pode ter `wtag-credenciais-2026` nem
+`wtag-concorrencia-2026` no caminho de destino.** Nem `Write`, nem `Edit`, nem `sed -i`, nem `mv`, nem `rm`, nem `git`,
 nem redirecionamento de shell, nem os geradores `.py` (eles escrevem no
 diretório onde rodam — confira o `pwd` antes). Ler o original é permitido e
 encorajado.
 
-Ao fim de cada bloco de trabalho, confirme:
+Ao fim de cada bloco de trabalho, confirme as duas:
 
 ```bash
-cd ~/Projetos/wtag-credenciais-2026 && git status --porcelain
+cd ~/Projetos/wtag-credenciais-2026  && git status --porcelain
+cd ~/Projetos/wtag-concorrencia-2026 && git status --porcelain
 ```
 
-Só pode aparecer `?? "Claude outputs/"`, que é uma pasta que o app cria e que
-nunca foi commitada. Qualquer outra linha significa que a regra foi violada.
+Na v1 só pode aparecer `?? "Claude outputs/"`, que é uma pasta que o app cria e
+que nunca foi commitada. A de concorrência tem de sair **vazia**. Qualquer outra
+linha significa que a regra foi violada.
 
 ---
 
 ## 2 · O que é este deck
 
-Uma **credencial de concorrência**: apresentação de pitch para um anunciante
-específico, apresentada **em inglês**. Difere do deck de credenciais em três
-pontos:
+A **próxima credencial institucional** da WT.AG, sucessora do v1. Ele nasceu em
+29.09 como cópia da versão de concorrência — não do v1 — porque foi lá que as
+telas novas foram feitas.
 
-1. **Sai a abertura institucional do grupo.** Há conflito de interesse com um
-   concorrente do anunciante entre os clientes do grupo. Os detalhes estão no
-   briefing (ver §9) — e **não podem entrar no repositório, que é público.**
-2. **Recorte de portfólio:** só quatro clientes entram com case, cada um com
-   capa própria.
-3. **Idioma:** abre sempre em inglês; o português fica no toggle.
+Isso significa que ele **herdou três recortes que existiam por causa daquele
+pitch e que provavelmente não valem para uma credencial institucional.** São
+decisões de conteúdo pendentes, não bugs:
+
+1. **O ato de abertura institucional do grupo não está aqui.** Saiu por conflito
+   de interesse com o anunciante daquele pitch — motivo que não se aplica a uma
+   credencial institucional. O markup está no v1, pronto para ser trazido de
+   volta.
+2. **O portfólio está recortado em quatro clientes.** Sicredi e Odontoprev
+   saíram por aquele recorte; Golden Lake já voltou. Os assets dos que saíram
+   continuam no v1.
+3. **O deck abre em inglês**, o que era exigência do pitch. Para uso
+   institucional talvez o padrão deva voltar a ser português (ver §8).
+
+**O que nasceu na concorrência e é para ficar:** a mandala (`O Que Fazemos`), as
+telas `WT.INTELLIGENCE` e `Ferramentas`, as quatro capas de cliente sobre foto e
+a tela única de `Nosso Time`.
 
 ---
 
@@ -79,16 +93,18 @@ pontos:
 `Ferramentas` e as quatro capas de cliente. A `Social First Agency` foi
 reescrita duas vezes e voltou à composição original, com texto de apoio novo.
 
-**Publicado em:** https://github.com/wtag/wtag-concorrencia-2026 (público) e
-https://wtag.github.io/wtag-concorrencia-2026/
+**Ainda não publicado.** Tem histórico de commits (27, herdados da versão de
+concorrência) mas **nenhum remote** — removido de propósito, para um `git push`
+distraído não mandar commits do v2 para o repositório da concorrência. Para
+publicar, ver `PUBLICAR.md`.
 
 ---
 
 ## 4 · Como rodar
 
 ```bash
-cd ~/Projetos/wtag-concorrencia-2026
-python3 servidor.py 8766          # http://localhost:8766/index.html
+cd ~/Projetos/wtag-credenciais-v2
+python3 servidor.py 8767          # http://localhost:8767/index.html
 ```
 
 **Use `servidor.py`, nunca `python3 -m http.server`.** O embutido não responde
@@ -125,8 +141,10 @@ sed -i '' 's/?v=220/?v=221/g' index.html
 Ele é **público**. Estas já entraram uma vez e tiveram de ser purgadas do
 histórico com `git filter-branch`:
 
-- **`Claude outputs/`** — onde o app deixa os arquivos anexados, incluindo o
-  briefing. Nomeia o concorrente do anunciante e o recorte de portfólio.
+- **`Claude outputs/`** — onde o app deixa os arquivos anexados. O briefing da
+  concorrência **não foi copiado para esta pasta**, de propósito: ele nomeia o
+  concorrente do anunciante daquele pitch e não tem função aqui. Se algum anexo
+  novo cair nessa pasta, ele não sobe.
 - **`WT.AG_*.pdf`** — 17 MB de binário que muda inteiro a cada geração. O padrão
   no `.gitignore` é curinga de propósito: quando o arquivo passou de
   `Credenciais` para `Concorrencia`, a linha antiga com o nome fixo deixou de
@@ -134,9 +152,9 @@ histórico com `git filter-branch`:
 - **`assets/img/capascases/`** — fotos de origem das capas (29 MB). Mesma regra
   dos vídeos em alta: master não entra no repositório.
 
-⚠ **A pasta `Claude outputs/` também está solta dentro do projeto ORIGINAL**,
-que é público. Não rastreada, mas lá. Um `git add -A` distraído levaria o
-briefing junto. Não é nosso para consertar — avise o Bernardo.
+⚠ **A pasta `Claude outputs/` está solta dentro do projeto v1**, que é público.
+Não rastreada, mas lá. Um `git add -A` distraído levaria o briefing junto. Não é
+nosso para consertar — avise o Bernardo.
 
 ---
 
@@ -276,49 +294,68 @@ WDI Consulting, Adhoc), cargo que já está em inglês, métrica em inglês.
 
 ---
 
-## 9 · Onde está o briefing
+## 9 · Onde está o briefing da concorrência
 
-`Claude outputs/PROMPT-wtag-concorrencia-2026.md`, **no disco, fora do git**.
-Ele traz os cinco direcionais do Lucas, o conflito de interesse com nome e
-sobrenome, e a lista de pontos que ficaram em aberto. Leia-o — mas não o
-commite, e não repita o conteúdo sensível em arquivo versionado.
+Em `~/Projetos/wtag-concorrencia-2026/Claude outputs/`, **no disco e fora do
+git**, e **não foi copiado para cá**. Ele traz os direcionais daquele pitch e o
+conflito de interesse com nome e sobrenome.
+
+Consulte-o se precisar entender **por que** a versão de concorrência cortou o
+que cortou — mas o v2 não é aquele pitch, e nada de lá deve ser commitado aqui
+nem repetido em arquivo versionado.
+
+O v2 ainda **não tem briefing próprio**. Quando ele chegar, vale escrever as
+decisões neste arquivo em vez de deixá-las só na conversa.
 
 ---
 
 ## 10 · Pendências
 
-### Decisões do Bernardo
+### Decisões de conteúdo — as três grandes, herdadas do recorte do pitch
 
-- **Links de vídeo no PDF.** São 22 vídeos; só 5 têm arquivo no Drive. Os
-  outros 17 apontam hoje para a **tela do deck publicado**
-  (`wtag.github.io/...#slide-NN`), onde o vídeo toca dentro do case. As
-  alternativas são subir os 17 ao Drive (publica os arquivos fora do controle
-  dele — **não faça sem OK explícito**) ou mandar todos para o deck, deixando o
-  comportamento uniforme.
+Estão detalhadas no §2. Em uma linha cada:
+
+- **O ato de abertura institucional do grupo volta?** Ele não está aqui. O
+  markup está no v1.
+- **O portfólio volta a dez cases?** Hoje são oito, em quatro clientes. Sicredi
+  e Odontoprev saíram; os assets deles estão no v1.
+- **O idioma padrão volta a ser português?** Hoje abre sempre em inglês, por
+  exigência daquele pitch.
+
+### Decisões menores, herdadas
+
+- **Links de vídeo no PDF.** São 22 vídeos e só 5 têm arquivo no Drive. Como o
+  v2 ainda não está publicado, `DECK_ONLINE` está **vazio** no `gerar-pdf.py` e
+  os outros 17 saem **sem link** — de propósito, porque link que leva ao deck de
+  outra versão é pior que link nenhum. Quando o v2 for publicado, preencher
+  `DECK_ONLINE` religa os 17. A outra saída é subir os arquivos ao Drive, o que
+  publica vídeo fora do controle do Bernardo: **não faça sem OK explícito.**
 - **`WDI` na tela 16** ainda quer dizer "We Data Intelligence". Ficou assim
   porque o pedido foi manter o resto do conteúdo, mas é o primeiro candidato a
   virar `WTI`.
-- **Vetores de Magalu, Keeta e Multiplan.** Bridgestone e Firestone já vieram
-  em SVG. Os outros três seguem em PNG pequeno; com o vetor, dobrar a escala
-  das capas é mudar uma constante (`T`, a área de tinta alvo).
-- **A frase de apoio da mandala** e as descrições dos serviços foram escritas
-  por mim a partir das fontes. Não têm número inventado, mas merecem revisão.
+- **Vetores de Magalu, Keeta e Multiplan.** Bridgestone e Firestone já vieram em
+  SVG. Os outros três seguem em PNG pequeno; com o vetor, dobrar a escala das
+  capas é mudar uma constante (`T`, a área de tinta alvo).
+- **A frase de apoio da mandala** e as descrições dos serviços foram escritas a
+  partir das fontes. Não têm número inventado, mas merecem revisão.
+- **As capas de cliente** carregam textos e big numbers que vieram de um PDF do
+  Bernardo, com os negritos preservados. Se o portfólio mudar, elas mudam junto.
 
 ### Trabalho técnico
 
-- **1 commit à frente do remoto** (em `12c6107`; origin em `a97e560`). O push é
-  feito pelo **GitHub Desktop** — o git de linha de comando não tem credencial
-  no chaveiro desta máquina.
+- **Sem remote.** Ver `PUBLICAR.md`. Quando houver repositório, o push é pelo
+  **GitHub Desktop** — o git de linha de comando não tem credencial no chaveiro
+  desta máquina.
 - **Não invente dado.** Se não há KPI fechado, o rodapé do case traz descritores
-  (I.A, Stop motion, Push, Real time, TV), como já acontece. Número inventado em
-  concorrência é risco jurídico.
+  (I.A, Stop motion, Push, Real time, TV), como já acontece. Número inventado
+  numa credencial é risco jurídico.
 
 ---
 
 ## 11 · Como trabalhar aqui
 
 1. `pwd` antes de cada bloco de edição. Confirme que está em
-   `wtag-concorrencia-2026`.
+   `wtag-credenciais-v2`.
 2. Edite o `index.html` / `css/deck.css` / `js/*`.
 3. Incremente o `?v=NN` nas quatro linhas.
 4. `python3 gerar-review.py` e leia os avisos.
@@ -329,4 +366,4 @@ commite, e não repita o conteúdo sensível em arquivo versionado.
 8. Commit pequeno, mensagem em português, descrevendo o **efeito** e não o
    arquivo — e explicando *por quê*, principalmente quando o número veio de
    medição.
-9. Confira que o original continua intocado.
+9. Confira que o v1 e a versão de concorrência continuam intocados.

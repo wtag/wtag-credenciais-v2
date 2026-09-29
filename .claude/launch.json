@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "concorrencia",
+      "name": "credenciais-v2",
       "runtimeExecutable": "/bin/sh",
-      "runtimeArgs": ["-c", "cd \"$HOME/Projetos/wtag-concorrencia-2026\" && exec python3 servidor.py 8766"],
-      "port": 8766
+      "runtimeArgs": ["-c", "cd \"$HOME/Projetos/wtag-credenciais-v2\" && exec python3 servidor.py 8767"],
+      "port": 8767
     }
   ]
 }
