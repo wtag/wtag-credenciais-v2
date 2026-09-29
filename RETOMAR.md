@@ -50,10 +50,10 @@ Isso significa que ele **herdou três recortes que existiam por causa daquele
 pitch e que provavelmente não valem para uma credencial institucional.** São
 decisões de conteúdo pendentes, não bugs:
 
-1. **O ato de abertura institucional do grupo não está aqui.** Saiu por conflito
-   de interesse com o anunciante daquele pitch — motivo que não se aplica a uma
-   credencial institucional. O markup está no v1, pronto para ser trazido de
-   volta.
+1. ~~O ato de abertura institucional do grupo não está aqui.~~ **Resolvido em
+   29.09: o Ato 1 voltou**, as cinco telas, os 37 ativos e as 36 entradas de
+   dicionário. "Principais Clientes" voltou com `data-oculto`, como já era no
+   v1: existe no markup e fica fora da navegação.
 2. **O portfólio está recortado em quatro clientes.** Sicredi e Odontoprev
    saíram por aquele recorte; Golden Lake já voltou. Os assets dos que saíram
    continuam no v1.
@@ -68,7 +68,8 @@ a tela única de `Nosso Time`.
 
 ## 3 · Estado atual
 
-**31 telas**, `?v=220`, dicionário com 449 entradas.
+**35 telas visíveis** (36 seções — "Principais Clientes" tem `data-oculto`),
+`?v=223`, dicionário com 485 entradas.
 
 | # | Tela | # | Tela |
 |---|---|---|---|
