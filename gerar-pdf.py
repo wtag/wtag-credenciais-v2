@@ -67,11 +67,10 @@ EXCLUIR = ()   # todos os cases deste deck estão completos
 # para leitor de PDF, e não para o deck.
 SEM_CAPA = True
 
-# O v2 ainda não está publicado. Enquanto estiver vazio, os vídeos sem arquivo
-# no Drive ficam SEM link em vez de apontar para o deck de outra versão — um
-# link que leva ao deck errado é pior que link nenhum. Quando o v2 tiver URL,
-# basta preencher aqui.
-DECK_ONLINE = ''
+# Publicado em 29.09. Os vídeos sem arquivo no Drive apontam para a tela
+# correspondente do deck online, via âncora #slide-NN. Se um dia o endereço
+# mudar, é esta linha que muda — nada mais no arquivo repete a URL.
+DECK_ONLINE = 'https://wtag.github.io/wtag-credenciais-v2/'
 
 # ---------------------------------------------------------------- os vídeos
 # Os arquivos de alta já vivem no Drive, em _Assets/Videos-Alta — o deck usa
@@ -550,8 +549,13 @@ def comprimir(caminho, limite=120_000, qualidade=86, lado_max=3840):
 def imprimir(origem, pdf):
     """--run-all-compositor-stages-before-draw e o orçamento de tempo virtual
     existem porque são 26 páginas de imagem: sem eles o Chrome imprime antes de
-    tudo decodificar e saem retângulos vazios."""
-    cmd = [CHROME, '--headless', '--disable-gpu',
+    tudo decodificar e saem retângulos vazios.
+
+    --headless=new, e não --headless, porque o headless ANTIGO não escreve
+    anotações de link: o <a href> vira texto e o PDF sai com zero links clicáveis,
+    em silêncio. Com o modo novo o mesmo documento rende 38 anotações /Link.
+    Todo PDF gerado antes de 29.09 saiu sem nenhum link por causa disso."""
+    cmd = [CHROME, '--headless=new', '--disable-gpu',
            '--run-all-compositor-stages-before-draw',
            '--virtual-time-budget=60000',
            '--no-pdf-header-footer',
