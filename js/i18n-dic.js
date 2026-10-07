@@ -157,10 +157,14 @@ window.DIC_EN = {
 /* ── capas de cliente · textos e big numbers ──────────────────────────────
    Os rótulos dos números são o que se traduz; os valores também, porque muda o
    separador decimal (64,7 vira 64.7) e a abreviação, que é B nos dois idiomas. */
+"Cooperativismo financeiro que <b>transforma comunidades</b> e movimenta a economia regional. Com mais de <b>40 anos de história</b>, a Sicredi Serrana RS/ES é uma das cooperativas que integram o Sistema Sicredi, conectando soluções financeiras, proximidade e desenvolvimento local no Rio Grande do Sul e no Espírito Santo.": "Cooperative finance that <b>transforms communities</b> and drives the regional economy. With more than <b>40 years of history</b>, Sicredi Serrana RS/ES is one of the cooperatives that make up the Sicredi System, bringing together financial solutions, proximity and local development in Rio Grande do Sul and Espírito Santo.",
 'O Magalu é um dos maiores ecossistemas de varejo e tecnologia do Brasil, integrando <b>lojas físicas, e-commerce, marketplace, logística, fintech e publicidade</b>. Em 2025, movimentou <b>R$ 64,7 bilhões em vendas</b>, mantendo presença nacional e uma das maiores operações digitais do varejo brasileiro.': "Magalu is one of Brazil's largest retail and technology ecosystems, bringing together <b>physical stores, e-commerce, marketplace, logistics, fintech and advertising</b>. In 2025 it moved <b>R$64.7 billion in sales</b>, holding a nationwide presence and one of the biggest digital operations in Brazilian retail.",
 'A Keeta é a operação internacional da <b>Meituan</b>, uma das maiores plataformas de tecnologia e serviços locais da China, com mais de <b>800 milhões de usuários transacionando anualmente</b>. O Brasil é uma das prioridades de expansão global do grupo.': "Keeta is the international arm of <b>Meituan</b>, one of China's largest technology and local-services platforms, with more than <b>800 million users transacting every year</b>. Brazil is one of the group's global expansion priorities.",
 'Bridgestone e Firestone fazem parte de um dos maiores grupos globais de pneus e mobilidade, com forte presença industrial, comercial e automotiva no Brasil. A operação brasileira atende tanto o mercado de reposição quanto <b>montadoras</b>, reunindo uma estrutura relevante de produção e desenvolvimento no país.': "Bridgestone and Firestone belong to one of the world's largest tyre and mobility groups, with a strong industrial, commercial and automotive presence in Brazil. The Brazilian operation serves both the replacement market and <b>carmakers</b>, with a substantial production and development structure in the country.",
 'A Multiplan é uma das maiores e mais relevantes empresas de shopping centers do Brasil, com ativos localizados em alguns dos principais mercados consumidores do país. Seu portfólio combina varejo, entretenimento, serviços e experiência.': "Multiplan is one of the largest and most relevant shopping-centre companies in Brazil, with assets in some of the country's main consumer markets. Its portfolio combines retail, entertainment, services and experience.",
+'+R$ 11 B': '+R$11B',
+'+R$ 1,1 B': '+R$1.1B',
+'+R$ 5 B': '+R$5B',
 'R$ 64,7 B': 'R$64.7B',
 'R$ 44,3 B': 'R$44.3B',
 'R$ 26,8 B': 'R$26.8B',
@@ -171,6 +175,10 @@ window.DIC_EN = {
 '1.246': '1,246',
 '~6.000': '~6,000',
 '905,9 mil m²': '905.9k m²',
+'em ativos': 'in assets',
+'pontos de atendimento': 'service points',
+'de patrimônio líquido': 'in equity',
+'em operações de crédito': 'in credit operations',
 'em vendas': 'in sales',
 'no digital': 'from digital',
 'lojas': 'stores',
@@ -291,9 +299,11 @@ window.DIC_EN = {
 
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
+'Capa · Sicredi': 'Cover · Sicredi',
 'Capa · Keeta': 'Cover · Keeta',
 'Capa · Bridgestone': 'Cover · Bridgestone',
 'Capa · Multiplan': 'Cover · Multiplan',
+'COOPERATIVISMO FINANCEIRO': 'COOPERATIVE FINANCE',
 'INFLUÊNCIA E VAREJO': 'INFLUENCE AND RETAIL',
 'DELIVERY E MARKETPLACE': 'DELIVERY AND MARKETPLACE',
 'PNEUS E MOBILIDADE': 'TYRES AND MOBILITY',
