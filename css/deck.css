@@ -1218,6 +1218,30 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
    tem (0,3,0). Sem esta linha os cartões nasceriam recortados e ficariam assim. */
 .case.case--vert.is-played .case__stack > [data-enter="expande"]:nth-child(n){
   clip-path:inset(0 0 0 0 round 28px)}
+/* ── cases SEM a faixa de números ──────────────────────────────────────────
+   Bichinhos, Private e Horóscopo chegaram sem métricas. Em vez de deixar a
+   régua da direita vazia, ela sai e a área de mídia encosta na margem:
+   868 + 980 = 1848, o mesmo limite dos outros elementos.
+
+   A caixa de mídia continua com 980 e não se alarga para os 1192 que sobram.
+   Essa largura não é arbitrária: é ela que faz a pilha de três cartões fechar
+   na altura disponível. Esticá-la obrigaria o herói a 2,16:1. Então o que
+   cresce é o respiro entre as duas colunas, não a mídia. */
+.case--sem-kpis .case__media{left:868px}
+
+/* ── case vertical com TRÊS peças ──────────────────────────────────────────
+   O Horóscopo do Golpe só existe em 9:16, como a Bridgestone, mas são três
+   filmes e não cinco — a grade 2×2 do .case--vert deixaria dois buracos.
+   Aqui os três ficam lado a lado e a caixa usa os 1192 inteiros, já que não há
+   régua de números: (1192−48)/3 = 381,3 de largura, que em 9:16 dá 678 de
+   altura. O align-items:center distribui a sobra na caixa de 870. */
+.case--vert3 .case__media{left:656px;width:1192px;flex-direction:row;gap:24px;
+  align-items:center;justify-content:flex-start}
+.case--vert3 .case__video{width:381.3px;height:678px;flex:none}
+.case--vert3 .case__stack{flex:none;width:786.7px;height:678px;
+  flex-direction:row;gap:24px}
+.case--vert3 .case__stack > .case__img{flex:none;width:381.3px;height:678px;border-radius:28px}
+
 .reperc--fitarodape{--logo-h:68px;flex:1 1 0;min-width:0;align-self:stretch;
   flex-direction:row;align-items:center;gap:22px;border-left:0;padding:0}
 .reperc--fitarodape .reperc__rot{flex:none;max-width:96px;line-height:1.25;
