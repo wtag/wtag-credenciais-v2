@@ -300,6 +300,13 @@ window.DIC_EN = {
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
 'Capa · Sicredi': 'Cover · Sicredi',
+'Golpes financeiros seguem atingindo associados, e a conversa de segurança costuma soar séria e distante.': 'Financial scams keep reaching members, and the security conversation tends to sound solemn and remote.',
+'Golpes financeiros seguem atingindo associados e colaboradores, e a conversa de segurança costuma soar séria e distante. O desafio era conscientizar sobre os riscos de forma leve, em uma linguagem que as pessoas realmente consumissem nas redes.': 'Financial scams keep reaching members and staff, and the security conversation tends to sound solemn and remote. The challenge was to raise awareness of the risks in a light way, in a language people would actually consume on social media.',
+'O horóscopo é um dos assuntos mais comentados nas redes, e todo mundo conhece alguém que quase caiu em um golpe.': 'Horoscopes are among the most talked-about subjects online, and everyone knows someone who nearly fell for a scam.',
+'O horóscopo é um dos assuntos mais comentados nas redes, e todo mundo conhece alguém que já quase caiu em um golpe. Em vez de alertar com medo, a Serrana usou a trend para falar de um tema sério com humor.': 'Horoscopes are among the most talked-about subjects online, and everyone knows someone who nearly fell for a scam. Instead of warning through fear, Serrana used the trend to treat a serious subject with humour.',
+'Série social first em que colaboradores contam, por signo, como reagiram a golpes reais — Pix, boleto, delivery.': 'A social-first series in which staff tell, sign by sign, how they reacted to real scams — Pix, bank slips, delivery.',
+'“Horóscopo do Golpe” é uma série de vídeos social first em que colaboradores da Serrana contam, por signo, como reagiram a golpes reais (Pix, boleto, delivery), fechando com: “Quem se informa, não se arrisca.”': '“Scam Horoscope” is a social-first video series in which Serrana staff tell, sign by sign, how they reacted to real scams (Pix, bank slips, delivery), closing with: “Those who stay informed take no chances.”',
+'Quem se informa, não se arrisca.': 'Those who stay informed take no chances.',
 /* ---- Sicredi Serrana: Clubinho da Poupanca, Private e Horoscopo do Golpe,
    os tres one pages de 07.10. O Horoscopo entrou com placeholder de texto
    nos tres blocos; quando o texto chegar, estas linhas trocam junto. ---- */
