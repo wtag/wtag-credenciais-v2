@@ -300,6 +300,33 @@ window.DIC_EN = {
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
 'Capa · Sicredi': 'Cover · Sicredi',
+/* ---- Sicredi Serrana · 40 Anos: o case voltou em 07.10, vindo do v1. Estas
+   entradas saíram junto com ele no recorte da versão de concorrência e foram
+   trazidas de volta sem reescrita, para o inglês seguir igual ao do v1. ---- */
+'de': 'spend',
+'Histórias que crescem com a gente': 'Stories that grow with us',
+'Assistir ao trailer': 'Watch the trailer',
+'A Sicredi Serrana, cooperativa com atuação na Serra Gaúcha, Vale do Caí e Espírito Santo, celebrou 40 anos com o desafio de contar 40 histórias marcantes de sua trajetória.': 'Sicredi Serrana, a cooperative operating across the Serra Gaúcha, the Vale do Caí and Espírito Santo, marked its 40th anniversary with the challenge of telling 40 defining stories from its history.',
+'A Sicredi Serrana é uma cooperativa de crédito do Sicredi, com atuação na Serra Gaúcha, Vale do Caí e Espírito Santo, que em 2025 celebrou 40 anos com o desafio de criar uma campanha contando 40 histórias marcantes de sua trajetória.': 'Sicredi Serrana is a Sicredi credit cooperative operating across the Serra Gaúcha, the Vale do Caí and Espírito Santo. In 2025 it marked its 40th anniversary with the challenge of building a campaign around 40 defining stories from its history.',
+'“Histórias que crescem com a gente” valoriza o protagonismo dos associados: depoimentos reais que ganham forma em quadros pintados por artistas locais.': '“Stories that grow with us” puts the members centre stage: real testimonials that take shape as paintings made by local artists.',
+'Série de vídeos com depoimentos reais publicada desde julho de 2025, com desdobramentos offline nas agências e mídia tradicional em rádio e jornal nas praças de atuação.': 'A series of films built on real testimonials, running since July 2025, with offline extensions in the branches and traditional media on radio and in print across the regions served.',
+'Mais de 30 das 40 histórias já foram publicadas desde julho de 2025, com versões no YouTube e adaptações para redes sociais. O projeto também teve desdobramentos offline, com adesivos nas agências, mídia e repercussão em veículos locais. A campanha foi impulsionada nas redes sociais para ampliar o alcance nas praças de atuação, além de contar com mídia tradicional como rádio e jornal.': 'More than 30 of the 40 stories have been published since July 2025, with YouTube versions and cuts adapted for social media. The project also extended offline, with decals in the branches, paid media and coverage in local outlets. The campaign was boosted on social to widen its reach across the regions served, alongside traditional media such as radio and print.',
+'Histórias': 'Stories',
+'Sicredi Serrana · 40 Anos — trailer': 'Sicredi Serrana · 40 Years — trailer',
+'Sicredi Serrana · 40 Anos — filme 1': 'Sicredi Serrana · 40 Years — film 1',
+'Sicredi Serrana · 40 Anos — filme 2': 'Sicredi Serrana · 40 Years — film 2',
+'Sicredi Serrana · 40 Anos — filme 3': 'Sicredi Serrana · 40 Years — film 3',
+'Assistir ao filme 1': 'Watch film 1',
+'Assistir ao filme 2': 'Watch film 2',
+'Assistir ao filme 3': 'Watch film 3',
+'Campanha Sicredi Serrana 40 Anos': 'Sicredi Serrana 40 Years campaign',
+'Compartilhamentos': 'Shares',
+'Prata em Mídias Integradas': 'Silver in Integrated Media',
+'Vencedor em Branded Content': 'Winner in Branded Content',
+'Prêmio Colunistas 2025': 'Prêmio Colunistas 2025',
+'Marcas Pelo Mundo': 'Marcas Pelo Mundo',
+'Matéria em Marcas Pelo Mundo': 'Article on Marcas Pelo Mundo',
+
 'Capa · Keeta': 'Cover · Keeta',
 'Capa · Bridgestone': 'Cover · Bridgestone',
 'Capa · Multiplan': 'Cover · Multiplan',
