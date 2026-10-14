@@ -81,7 +81,11 @@ DECK_ONLINE = 'https://wtag.github.io/wtag-credenciais-v2/'
 # Para o PDF sair da agência, a pasta precisa ir para "qualquer pessoa com o
 # link · leitor" no Drive — a API de integração não muda esse ajuste.
 DRIVE = {
-    'assets/video/showreel-wtag.mp4':        '13BFRBAkxWK763XY_elaQRid8rRjUl0lG',
+    # O showreel trocou pelo vertical de 2026 em 14.10. O id abaixo e do
+    # arquivo ANTIGO e foi removido de proposito: manter a chave apontando
+    # para ele faria o PDF novo levar ao filme velho, em silencio. Sem id, o
+    # link cai na tela do deck no ar, como os outros videos sem Drive.
+    # 'assets/video/showreel-wtag2.mp4': '<id novo, quando subir ao Drive>',
     'assets/video/case-magalu.mp4':          '1n_ADx4O-c8S-l3Kq0303apFROvZAsff5',
     'assets/video/case-central-do-corre.mp4': '17up2G6KZ-B1WyDEOKLHFF7aacSAJrmso',
     'assets/video/case-pulando-o-bloco.mp4': '1ERyWn-C2ZLsLaZ04Ds_XzDbk6W3X2iO7',
@@ -202,7 +206,7 @@ def showreel(bloco):
         if m:
             print('  ! s14: <video> encontrado sem poster= — pôster não trocado')
         return bloco
-    fid = DRIVE.get('assets/video/showreel-wtag.mp4')
+    fid = DRIVE.get('assets/video/showreel-wtag2.mp4')
     novo = '<img class="s14__video" src="%s" alt="Showreel WT.AG">' % m.group(1)
     if fid:
         novo += ancora(link_drive(fid))

@@ -129,6 +129,10 @@ a{color:inherit}
 .media img,.media video{width:100%;height:auto;display:block}
 .media--16x9{aspect-ratio:16/9}
 .media--16x9 img{height:100%;object-fit:cover}
+/* o showreel de 2026 e 9:16: na caixa 16x9 com cover sobrava uma tira do
+   meio do quadro. Aqui ele fica inteiro, limitado pela altura da tela. */
+.media--9x16{aspect-ratio:9/16;max-height:78vh;margin-inline:auto}
+.media--9x16 img{height:100%;object-fit:contain;background:#000}
 .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
   width:clamp(52px,15vw,68px);aspect-ratio:1;border:0;border-radius:50%;
   background:var(--acento,var(--laranja-wt));display:grid;place-items:center;cursor:pointer}

@@ -6,6 +6,12 @@
       "runtimeExecutable": "/bin/sh",
       "runtimeArgs": ["-c", "cd \"$HOME/Projetos/wtag-credenciais-v2\" && exec python3 servidor.py 8767"],
       "port": 8767
+    },
+    {
+      "name": "wtag-cases",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "cd \"$HOME/Projetos/wtag-cases\" && exec python3 servidor.py 8768"],
+      "port": 8768
     }
   ]
 }

@@ -610,7 +610,7 @@ def emitir(dados):
                 o.append('</div>')
         if d.get('showreel'):
             sh = d['showreel']
-            o.append('<div class="media media--16x9" data-video="%s" data-legenda="%s">'
+            o.append('<div class="media media--9x16" data-video="%s" data-legenda="%s">'
                      '<img data-lazy="%s" alt=""><button class="play" type="button" '
                      'aria-label="Assistir"></button></div>'
                      % (sh['src'] or '', esc(sh['legenda'] or t), sh['poster'] or ''))

@@ -532,7 +532,11 @@ html,body{background:var(--letterbox,#000)}
 
 /* 14 — showreel */
 .s14{background:#000}
-.s14__video{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover;background:#000}
+/* O showreel de 2026 e VERTICAL (1080x1920). Com object-fit:cover ele seria
+   ampliado ate cobrir os 1920 de largura e perderia 68% da altura — ou seja,
+   quase tudo. Com contain ele trava pela altura do palco, fica inteiro e as
+   duas tarjas laterais caem no #000 do .s14, que ja era a cor de fundo. */
+.s14__video{position:absolute;inset:0;width:1920px;height:1080px;object-fit:contain;background:#000}
 .play-btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:132px;height:132px;
   border-radius:50%;background:var(--laranja-wt);display:grid;place-items:center;z-index:7;
   box-shadow:0 0 0 0 rgba(255,73,0,.55);transition:transform 160ms var(--ease),box-shadow 200ms ease,opacity 200ms ease}
