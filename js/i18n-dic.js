@@ -300,6 +300,11 @@ window.DIC_EN = {
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
 'Capa · Sicredi': 'Cover · Sicredi',
+'Não conte com a sorte': "Don't count on luck",
+'LED no clássico entre Palmeiras e Corinthians': 'LED board at the Palmeiras v Corinthians derby',
+'Arquibancada e LED durante a partida': 'Stands and LED board during the match',
+'arquivo pendente': 'file pending',
+'Selo da campanha': 'Campaign seal',
 'Influenciador Magalu · Aposte em Você': 'Influenciador Magalu · Bet on Yourself',
 'Com a proibição das bets em determinados espaços publicitários, os LEDs do Brasileirão ficaram livres.': 'With betting brands barred from certain advertising spaces, the LED boards of the Brasileirão were suddenly free.',
 'Com a proibição das bets em determinados espaços publicitários, os LEDs do Brasileirão ficaram livres — um inventário nobre, em horário nobre, subitamente disponível.': 'With betting brands barred from certain advertising spaces, the LED boards of the Brasileirão were suddenly free — prime inventory, in prime time, available overnight.',
