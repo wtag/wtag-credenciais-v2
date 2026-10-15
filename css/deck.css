@@ -544,6 +544,11 @@ html,body{background:var(--letterbox,#000)}
   border-left:40px solid var(--preto-wt);border-top:25px solid transparent;border-bottom:25px solid transparent}
 .play-btn:hover{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 0 0 26px rgba(255,73,0,.13)}
 .play-btn.is-hidden{opacity:0;pointer-events:none;transform:translate(-50%,-50%) scale(.8)}
+/* O poster do showreel e o wordmark centrado no quadro, e o botao de play
+   tambem nasce no centro — um cobria o outro. Aqui ele desce para 68% da
+   altura: a marca termina por volta dos 590 e o botao passa a ocupar de
+   668 a 800, livre. So no .s14; nos cases o play continua centrado. */
+.s14 .play-btn{top:68%}
 .s14__legenda{position:absolute;left:35.4px;bottom:35.8px;font-family:var(--font-sans);font-weight:500;
   font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--creme-55);z-index:7}
 
