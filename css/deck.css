@@ -553,27 +553,41 @@ html,body{background:var(--letterbox,#000)}
   font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--creme-55);z-index:7}
 
 /* ── índice de cases no divisor ────────────────────────────────────────────
-   A palavra CASES encolheu de 869 para 212 de corpo — ela deixou de ser o
-   conteudo da tela e virou titulo. O conteudo agora e o indice: cinco colunas,
-   uma por cliente, com o nome do cliente levando a capa dele e cada caixa
-   abaixo levando ao case.
+   CASES ocupa o alto (maiuscula de 360, de 110 a 470), um fio em 520 separa, e
+   o indice vai de 580 a 992 — 52 acima do HUD, em 1044.
 
-   Geometria: mesma margem do resto, 48 a 1872. Cinco colunas de 345,6 com 24
-   de intervalo. A coluna mais alta e a do Sicredi, com quatro cases: 51 de
-   cabecalho, 18 de intervalo, 4x84 de caixa e 3x18 entre elas = 459. Comecando
-   em 400, termina em 859 — 185 acima do HUD, em 1044. */
-.cases-idx{position:absolute;left:48px;top:400px;width:1824px;
+   Cinco colunas de 345,6 com 24 de intervalo, dentro das margens de sempre
+   (48 a 1872). A coluna mais alta e a do Sicredi: 66 de cabecalho, 16 de
+   intervalo, 4x72 de caixa e 3x14 entre elas = 412.
+
+   Os logos vem equalizados por AREA DE TINTA, nao por altura — a regra que o
+   deck usa nas capas de cliente. Resolvendo para 1.900px² constantes: Sicredi
+   153x38, Bridgestone 215x43, Magalu 140x31, Keeta 92x49 e Multiplan 181x38.
+
+   Atencao a uma armadilha aqui: a fracao de tinta tem de ser medida sobre a
+   CAIXA DO ARQUIVO, e a caixa exibida tem de manter a proporcao do arquivo —
+   nao a da tinta. O Bridgestone tem viewBox 5:1 mas a tinta dentro dele mede
+   8:1; dimensionado pela tinta, o object-fit:contain encaixotava o desenho e
+   ele pintava 105 de largura em vez de 215.
+
+   O Keeta e quase quadrado (1,88 contra os 4 a 5 dos outros) e e o unico que
+   trava pela altura; o teto de 49 foi escolhido para que ele caia exatamente
+   nos mesmos 1.900. Alinhados pela base, que o fio logo abaixo transforma em
+   linha de apoio. */
+.cases-fio{position:absolute;left:48px;top:520px;width:1824px;height:1px;
+  background:rgba(247,249,234,.22);z-index:6}
+.cases-idx{position:absolute;left:48px;top:580px;width:1824px;
   display:grid;grid-template-columns:repeat(5,1fr);gap:0 24px;z-index:6;
   align-items:start}
-.cases-idx__col{display:flex;flex-direction:column;gap:18px}
-.cases-idx__cli{display:block;width:100%;box-sizing:border-box;text-align:left;
-  padding:0 0 16px;background:none;border:0;border-bottom:1px solid rgba(247,249,234,.22);
-  font-family:var(--font-display);font-weight:400;font-size:34px;line-height:1;
-  text-transform:uppercase;color:var(--creme-wt);cursor:pointer;
-  transition:color 180ms ease,border-color 180ms ease}
-.cases-idx__cli:hover{color:var(--laranja-wt);border-color:var(--laranja-wt)}
+.cases-idx__col{display:flex;flex-direction:column;gap:16px}
+.cases-idx__cli{display:flex;align-items:flex-end;width:100%;box-sizing:border-box;
+  height:66px;padding:0 0 16px;background:none;
+  border:0;border-bottom:1px solid rgba(247,249,234,.22);
+  cursor:pointer;transition:border-color 180ms ease,opacity 180ms ease}
+.cases-idx__cli img{display:block;object-fit:contain;object-position:left bottom}
+.cases-idx__cli:hover{border-color:var(--laranja-wt);opacity:.78}
 .cases-idx__b{display:flex;align-items:center;width:100%;box-sizing:border-box;
-  min-height:84px;padding:14px 22px;border-radius:18px;text-align:left;
+  min-height:72px;padding:12px 20px;border-radius:16px;text-align:left;
   font-family:var(--font-sans);font-weight:500;font-size:15px;letter-spacing:.06em;
   line-height:1.3;text-transform:uppercase;
   color:var(--creme-72);background:none;
