@@ -552,19 +552,30 @@ html,body{background:var(--letterbox,#000)}
 .s14__legenda{position:absolute;left:35.4px;bottom:35.8px;font-family:var(--font-sans);font-weight:500;
   font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--creme-55);z-index:7}
 
-/* ── índice de clientes no divisor de CASES ────────────────────────────────
-   A palavra CASES ocupa de 231 a 848 (topo da maiúscula + 617 de altura). O
-   índice entra abaixo, em 906, e termina em 962 — sobram 82 até o topo do HUD,
-   em 1044. Alinhado às mesmas margens da palavra: 48 a 1872.
+/* ── índice de cases no divisor ────────────────────────────────────────────
+   A palavra CASES encolheu de 869 para 212 de corpo — ela deixou de ser o
+   conteudo da tela e virou titulo. O conteudo agora e o indice: cinco colunas,
+   uma por cliente, com o nome do cliente levando a capa dele e cada caixa
+   abaixo levando ao case.
 
-   Nesta primeira versão são só caixas de traçado com o nome. O preenchimento
-   no hover reusa o --acento do slide, como a pílula de navegação do topo. */
-.cases-idx{position:absolute;left:48px;top:906px;width:1824px;height:56px;
-  display:flex;align-items:center;justify-content:center;gap:16px;z-index:6}
-.cases-idx__b{display:inline-flex;align-items:center;justify-content:center;
-  height:56px;padding:0 30px;border-radius:999px;box-sizing:border-box;
-  font-family:var(--font-sans);font-weight:500;font-size:14px;letter-spacing:.14em;
-  text-transform:uppercase;white-space:nowrap;
+   Geometria: mesma margem do resto, 48 a 1872. Cinco colunas de 345,6 com 24
+   de intervalo. A coluna mais alta e a do Sicredi, com quatro cases: 51 de
+   cabecalho, 18 de intervalo, 4x84 de caixa e 3x18 entre elas = 459. Comecando
+   em 400, termina em 859 — 185 acima do HUD, em 1044. */
+.cases-idx{position:absolute;left:48px;top:400px;width:1824px;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:0 24px;z-index:6;
+  align-items:start}
+.cases-idx__col{display:flex;flex-direction:column;gap:18px}
+.cases-idx__cli{display:block;width:100%;box-sizing:border-box;text-align:left;
+  padding:0 0 16px;background:none;border:0;border-bottom:1px solid rgba(247,249,234,.22);
+  font-family:var(--font-display);font-weight:400;font-size:34px;line-height:1;
+  text-transform:uppercase;color:var(--creme-wt);cursor:pointer;
+  transition:color 180ms ease,border-color 180ms ease}
+.cases-idx__cli:hover{color:var(--laranja-wt);border-color:var(--laranja-wt)}
+.cases-idx__b{display:flex;align-items:center;width:100%;box-sizing:border-box;
+  min-height:84px;padding:14px 22px;border-radius:18px;text-align:left;
+  font-family:var(--font-sans);font-weight:500;font-size:15px;letter-spacing:.06em;
+  line-height:1.3;text-transform:uppercase;
   color:var(--creme-72);background:none;
   border:1px solid rgba(247,249,234,.3);cursor:pointer;
   transition:color 180ms ease,background 180ms ease,border-color 180ms ease}

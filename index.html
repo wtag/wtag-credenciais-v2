@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=247">
+<link rel="stylesheet" href="css/deck.css?v=249">
 </head>
 <body>
 
@@ -1099,26 +1099,45 @@
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
 
-  <!-- A13 + marcação 7 da revisão · fora o capítulo anterior e os intervalos.
-       "bem estourado na tela": o corpo não é escolhido, é resolvido — 869px é o
-       que faz "CASES" medir 1824 de largura (x=48 a x=1872), as mesmas margens
-       do slide 07. Altura de maiúscula 617, centrada em y=540 (topo em 231).
-       A palavra tem 5 letras, então enche a largura com um corpo muito maior que
-       o "ESTRUTURA" do slide 22, que tem 9. A regra é a mesma nos dois: encher a
-       largura. Traçado reforçado via tracado-forte. -->
-  <div class="abs l-chamada rl-alvo rl-caixa tracado-forte" style="left:50%;top:calc(231px - 0.145*869px);transform:translateX(-50%);
+  <!-- CASES encolheu de 869 para 212 de corpo: com o índice abaixo, a palavra
+       deixa de ser o conteúdo da tela e vira título. Ancorada à esquerda, nos
+       mesmos 48 do resto, com a maiúscula de 150 começando em 110. -->
+  <div class="abs l-chamada rl-alvo rl-caixa tracado-forte" style="left:48px;top:calc(110px - 0.145*212px);
        font-family:var(--font-display);font-weight:400;
-       text-transform:uppercase;font-size:869px;line-height:1;color:var(--creme-wt);white-space:nowrap"
+       text-transform:uppercase;font-size:212px;line-height:1;color:var(--creme-wt);white-space:nowrap"
        data-delay="300" data-rl-dur="700" data-rl-stagger="54" data-rl-voltas="2">CASES</div>
-  <!-- Índice clicável: cada caixa vai direto para a capa do cliente, pelo
-       mesmo data-ir da pílula de navegação do topo. data-nonav impede que o
+  <!-- Índice: o nome do cliente leva à capa dele, cada caixa leva ao case.
+       Mesmo data-ir da pílula de navegação do topo; data-nonav impede que o
        clique seja lido como "avançar slide". -->
-  <div class="cases-idx l-apoio" data-stagger="60" data-delay="760">
-    <button class="cases-idx__b" type="button" data-ir="s-capa-sicredi" data-nonav data-enter="up">Sicredi</button>
-    <button class="cases-idx__b" type="button" data-ir="s-capa-magalu" data-nonav data-enter="up">Magalu</button>
-    <button class="cases-idx__b" type="button" data-ir="s-capa-keeta" data-nonav data-enter="up">Keeta</button>
-    <button class="cases-idx__b" type="button" data-ir="s-capa-bridgestone" data-nonav data-enter="up">Bridgestone</button>
-    <button class="cases-idx__b" type="button" data-ir="s-capa-multiplan" data-nonav data-enter="up">Multiplan</button>
+  <div class="cases-idx l-apoio" data-stagger="40" data-delay="620">
+    <div class="cases-idx__col">
+      <button class="cases-idx__cli" type="button" data-ir="s-capa-sicredi" data-nonav data-enter="up">Sicredi</button>
+      <button class="cases-idx__b" type="button" data-ir="s-sicredi" data-nonav data-enter="up">40 Anos</button>
+      <button class="cases-idx__b" type="button" data-ir="s-bichinhos" data-nonav data-enter="up">Clubinho da Poupança</button>
+      <button class="cases-idx__b" type="button" data-ir="s-private" data-nonav data-enter="up">Private</button>
+      <button class="cases-idx__b" type="button" data-ir="s-horoscopo" data-nonav data-enter="up">Horóscopo do Golpe</button>
+    </div>
+    <div class="cases-idx__col">
+      <button class="cases-idx__cli" type="button" data-ir="s-capa-magalu" data-nonav data-enter="up">Magalu</button>
+      <button class="cases-idx__b" type="button" data-ir="s-magalu" data-nonav data-enter="up">Craques Gigantes</button>
+      <button class="cases-idx__b" type="button" data-ir="s-lojinha-fiuk" data-nonav data-enter="up">Lojinha do Fiuk</button>
+      <button class="cases-idx__b" type="button" data-ir="s-influ-magalu" data-nonav data-enter="up">Aposte em Você</button>
+    </div>
+    <div class="cases-idx__col">
+      <button class="cases-idx__cli" type="button" data-ir="s-capa-keeta" data-nonav data-enter="up">Keeta</button>
+      <button class="cases-idx__b" type="button" data-ir="s-central-corre" data-nonav data-enter="up">Central do Corre</button>
+      <button class="cases-idx__b" type="button" data-ir="s-pulando-bloco" data-nonav data-enter="up">Pulando o Bloco</button>
+      <button class="cases-idx__b" type="button" data-ir="s-keeta-brasil-corre" data-nonav data-enter="up">Brasil Corre</button>
+    </div>
+    <div class="cases-idx__col">
+      <button class="cases-idx__cli" type="button" data-ir="s-capa-bridgestone" data-nonav data-enter="up">Bridgestone</button>
+      <button class="cases-idx__b" type="button" data-ir="s-bridgestone" data-nonav data-enter="up">Seu Pneu de Carro Novo</button>
+    </div>
+    <div class="cases-idx__col">
+      <button class="cases-idx__cli" type="button" data-ir="s-capa-multiplan" data-nonav data-enter="up">Multiplan</button>
+      <button class="cases-idx__b" type="button" data-ir="s-barrashoppingsul" data-nonav data-enter="up">Now New Barra!</button>
+      <button class="cases-idx__b" type="button" data-ir="s-golden-lake" data-nonav data-enter="up">Lake Baikal</button>
+    </div>
   </div>
 
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="630"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
@@ -2430,8 +2449,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=247"></script>
-<script src="js/i18n-dic.js?v=247"></script>
-<script src="js/i18n.js?v=247"></script>
+<script src="js/deck.js?v=249"></script>
+<script src="js/i18n-dic.js?v=249"></script>
+<script src="js/i18n.js?v=249"></script>
 </body>
 </html>
