@@ -39,3 +39,34 @@ O mesmo de sempre, e vale desde o primeiro commit:
 - **`WT.AG_*.pdf`** — binário que muda inteiro a cada geração.
 - **`assets/img/capascases/`** — fotos de origem das capas. Master não entra no
   repositório, mesma regra dos vídeos em alta.
+
+## Publicar os PDFs na pasta do Drive
+
+```
+python3 publicar-pdf.py
+```
+
+Ele regera os dois PDFs, manda o que estava na pasta para `_refugo/` e copia
+os novos com dia e versão no fim do nome:
+
+```
+WT.AG_Credenciais_v2_PT_29.10.2026_v01.pdf
+WT.AG_Credenciais_v2_EN_29.10.2026_v01.pdf
+```
+
+Para publicar os PDFs que já estão gerados, sem refazê-los, use
+`--sem-gerar`.
+
+**Por que mover em vez de sobrescrever:** a pasta é de drive compartilhado e
+outras pessoas podem ter o link de um arquivo. Sobrescrever trocaria o
+conteúdo por baixo de quem já tinha o link. Mover preserva o que foi
+distribuído e deixa claro qual é o atual.
+
+**A versão é um contador global, não por dia.** Dois PDFs gerados no mesmo dia
+precisam de nomes diferentes, e a data sozinha não resolve. O número sai do
+maior `_vNN` já visto na pasta e no refugo, então nunca se repete — nem depois
+de alguém limpar o refugo pela metade.
+
+A pasta é
+`Drives compartilhados/WT.AG/2026/Criação/WTA_Credenciais/PDF`, fixa no
+início do `publicar-pdf.py`.
