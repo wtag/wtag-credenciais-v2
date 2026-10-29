@@ -553,29 +553,27 @@ html,body{background:var(--letterbox,#000)}
   font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--creme-55);z-index:7}
 
 /* ── índice de cases no divisor · lista unica a direita ───────────────────
-   CASES a esquerda, um fio vertical, e os cinco clientes EMPILHADOS numa
-   coluna so a direita. Cada case e uma linha de texto com fio fino embaixo —
-   sem moldura, sem preenchimento, sem raio.
+   CASES na base, a esquerda; os cinco clientes empilhados numa coluna so, a
+   direita. Sem fio vertical e sem fio entre as linhas: o que separa os grupos
+   e o espaco e o fio sob cada logo.
 
-   Altura do bloco: 5 cabecalhos de 40 (mais 10 de respiro), 13 linhas de 34 e
-   4 intervalos de 22 entre grupos = 780, de 150 a 930. O fio acompanha.
+   A palavra assenta na MESMA BASE do WT.AG do canto oposto, e o numero saiu de
+   medicao, nao de conta. A tinta do logo vai de 1011 a 1037. A de CASES passa
+   9 abaixo da linha da maiuscula, porque o tracado reforcado engorda a letra e
+   o S tem sobressalencia — entao o topo fica em 688 e nao nos 697,3 que a
+   conta daria. Medido na captura, as duas tintas fecham em 1037, com 7 de
+   folga ate o HUD, que comeca em 1044.
 
-   Largura: a coluna tem 420 e encosta na margem direita (1452 a 1872); o fio
-   fica em 1404. CASES usa 1007 de largura (corpo 480, maiuscula 341), centrado
-   verticalmente contra o bloco: topo da maiuscula em 370, base em 711, contra
-   o centro do indice em 540.
-
-   O vazio entre a palavra e o fio e proposital. Empilhar os clientes troca
-   largura por altura, e numa tela de divisao o ar nao incomoda — amontoar a
-   lista no meio para "preencher" so tiraria o respiro de cada linha.
+   Lista: 5 cabecalhos de 40 com 10 de respiro, 13 linhas de 34 e 4 intervalos
+   de 26 entre grupos = 788, de 150 a 938, encostada na margem direita (1452 a
+   1872). Os intervalos subiram de 22 para 26 porque, sem os fios, e so o
+   espaco que agrupa.
 
    Logos equalizados por AREA DE TINTA em 800px², medidos sobre a caixa do
    ARQUIVO e dimensionados pela proporcao do arquivo. O Bridgestone e quem
    denuncia o erro contrario: viewBox 5:1 contra tinta 8:1. */
-.cases-fio{position:absolute;left:1404px;top:150px;width:1px;height:780px;
-  background:rgba(247,249,234,.22);z-index:6}
 .cases-idx{position:absolute;left:1452px;top:150px;width:420px;
-  display:grid;grid-template-columns:1fr;gap:22px 0;z-index:6;
+  display:grid;grid-template-columns:1fr;gap:26px 0;z-index:6;
   align-items:start}
 .cases-idx__col{display:flex;flex-direction:column;gap:0}
 .cases-idx__cli{display:flex;align-items:flex-end;width:100%;box-sizing:border-box;
@@ -588,11 +586,9 @@ html,body{background:var(--letterbox,#000)}
   min-height:34px;padding:0 0 2px;text-align:left;
   font-family:var(--font-sans);font-weight:500;font-size:13px;letter-spacing:.05em;
   line-height:1.25;text-transform:uppercase;
-  color:var(--creme-72);background:none;border:0;
-  border-bottom:1px solid rgba(247,249,234,.12);cursor:pointer;
-  transition:color 180ms ease,border-color 180ms ease,padding-left 180ms ease}
-.cases-idx__b:hover{color:var(--laranja-wt);border-color:var(--laranja-wt);padding-left:6px}
-.cases-idx__b:last-child{border-bottom:0}
+  color:var(--creme-72);background:none;border:0;cursor:pointer;
+  transition:color 180ms ease,padding-left 180ms ease}
+.cases-idx__b:hover{color:var(--laranja-wt);padding-left:6px}
 
 /* 15 — marcas parceiras (mural orgânico) */
 .s15__logo{position:absolute;display:grid;place-items:center;opacity:0;transform:scale(.9)}
