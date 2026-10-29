@@ -552,51 +552,46 @@ html,body{background:var(--letterbox,#000)}
 .s14__legenda{position:absolute;left:35.4px;bottom:35.8px;font-family:var(--font-sans);font-weight:500;
   font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--creme-55);z-index:7}
 
-/* ── índice de cases no divisor · arranjo lado a lado ──────────────────────
-   CASES numa coluna a esquerda, o indice a direita, e um fio VERTICAL entre
-   os dois no lugar do horizontal.
+/* ── índice de cases no divisor · lista unica a direita ───────────────────
+   CASES a esquerda, um fio vertical, e os cinco clientes EMPILHADOS numa
+   coluna so a direita. Cada case e uma linha de texto com fio fino embaixo —
+   sem moldura, sem preenchimento, sem raio.
 
-   O indice e lista, nao grade de caixas: cada case e uma linha de texto com
-   um fio fino embaixo. Sem moldura, sem preenchimento, sem raio. Isso derruba
-   a altura da coluna mais cheia (Sicredi, quatro cases) de 400 para 214 e
-   libera largura — que foi para o titulo.
+   Altura do bloco: 5 cabecalhos de 40 (mais 10 de respiro), 13 linhas de 34 e
+   4 intervalos de 22 entre grupos = 780, de 150 a 930. O fio acompanha.
 
-   Larguras: 48 a 1872 de area util. A coluna do titulo tem 600, o que poe
-   CASES em 286 de corpo (a palavra nao quebra: a 869 ela mede 1824, entao a
-   largura disponivel e que define o corpo). Fio em 672. Indice de 720 a 1872,
-   com 1152 para cinco colunas de 211,2 e 24 de intervalo.
+   Largura: a coluna tem 420 e encosta na margem direita (1452 a 1872); o fio
+   fica em 1404. CASES usa 1007 de largura (corpo 480, maiuscula 341), centrado
+   verticalmente contra o bloco: topo da maiuscula em 370, base em 711, contra
+   o centro do indice em 540.
 
-   Vertical: cabecalho de 48, 12 de intervalo e linhas de 38 — 48+12+4x38=212,
-   de 300 a 512. CASES tem maiuscula de 203, de 300 a 503: os dois blocos
-   comecam na mesma linha e terminam quase juntos.
+   O vazio entre a palavra e o fio e proposital. Empilhar os clientes troca
+   largura por altura, e numa tela de divisao o ar nao incomoda — amontoar a
+   lista no meio para "preencher" so tiraria o respiro de cada linha.
 
-   Logos equalizados por AREA DE TINTA em 1.000px², medidos sobre a caixa do
-   ARQUIVO e dimensionados pela proporcao do arquivo — e o que faz o
-   object-fit:contain pintar de ponta a ponta. O Bridgestone e quem denuncia o
-   erro contrario: viewBox 5:1 contra tinta 8:1. */
-.cases-fio{position:absolute;left:672px;top:260px;width:1px;height:300px;
+   Logos equalizados por AREA DE TINTA em 800px², medidos sobre a caixa do
+   ARQUIVO e dimensionados pela proporcao do arquivo. O Bridgestone e quem
+   denuncia o erro contrario: viewBox 5:1 contra tinta 8:1. */
+.cases-fio{position:absolute;left:1404px;top:150px;width:1px;height:780px;
   background:rgba(247,249,234,.22);z-index:6}
-.cases-idx{position:absolute;left:720px;top:300px;width:1152px;
-  display:grid;grid-template-columns:repeat(5,1fr);gap:0 24px;z-index:6;
+.cases-idx{position:absolute;left:1452px;top:150px;width:420px;
+  display:grid;grid-template-columns:1fr;gap:22px 0;z-index:6;
   align-items:start}
-/* gap 0 entre as linhas: e o fio de cada uma que separa, nao o espaco.
-   O respiro de 12 fica so entre o logo e a primeira linha. */
 .cases-idx__col{display:flex;flex-direction:column;gap:0}
 .cases-idx__cli{display:flex;align-items:flex-end;width:100%;box-sizing:border-box;
-  height:48px;padding:0 0 12px;margin-bottom:12px;background:none;
+  height:40px;padding:0 0 10px;margin-bottom:10px;background:none;
   border:0;border-bottom:1px solid rgba(247,249,234,.3);
   cursor:pointer;transition:border-color 180ms ease,opacity 180ms ease}
 .cases-idx__cli img{display:block;object-fit:contain;object-position:left bottom}
 .cases-idx__cli:hover{border-color:var(--laranja-wt);opacity:.78}
 .cases-idx__b{display:flex;align-items:center;width:100%;box-sizing:border-box;
-  min-height:38px;padding:0 0 2px;text-align:left;
+  min-height:34px;padding:0 0 2px;text-align:left;
   font-family:var(--font-sans);font-weight:500;font-size:13px;letter-spacing:.05em;
   line-height:1.25;text-transform:uppercase;
   color:var(--creme-72);background:none;border:0;
   border-bottom:1px solid rgba(247,249,234,.12);cursor:pointer;
   transition:color 180ms ease,border-color 180ms ease,padding-left 180ms ease}
 .cases-idx__b:hover{color:var(--laranja-wt);border-color:var(--laranja-wt);padding-left:6px}
-/* o ultimo de cada coluna nao precisa de fio: nao separa nada */
 .cases-idx__b:last-child{border-bottom:0}
 
 /* 15 — marcas parceiras (mural orgânico) */
