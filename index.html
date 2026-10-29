@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=246">
+<link rel="stylesheet" href="css/deck.css?v=247">
 </head>
 <body>
 
@@ -1110,6 +1110,17 @@
        font-family:var(--font-display);font-weight:400;
        text-transform:uppercase;font-size:869px;line-height:1;color:var(--creme-wt);white-space:nowrap"
        data-delay="300" data-rl-dur="700" data-rl-stagger="54" data-rl-voltas="2">CASES</div>
+  <!-- Índice clicável: cada caixa vai direto para a capa do cliente, pelo
+       mesmo data-ir da pílula de navegação do topo. data-nonav impede que o
+       clique seja lido como "avançar slide". -->
+  <div class="cases-idx l-apoio" data-stagger="60" data-delay="760">
+    <button class="cases-idx__b" type="button" data-ir="s-capa-sicredi" data-nonav data-enter="up">Sicredi</button>
+    <button class="cases-idx__b" type="button" data-ir="s-capa-magalu" data-nonav data-enter="up">Magalu</button>
+    <button class="cases-idx__b" type="button" data-ir="s-capa-keeta" data-nonav data-enter="up">Keeta</button>
+    <button class="cases-idx__b" type="button" data-ir="s-capa-bridgestone" data-nonav data-enter="up">Bridgestone</button>
+    <button class="cases-idx__b" type="button" data-ir="s-capa-multiplan" data-nonav data-enter="up">Multiplan</button>
+  </div>
+
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="630"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
@@ -1141,7 +1152,7 @@
      ══════════════════════════════════════════════════════════════════════════ -->
 
 <!-- 24 ─ Capa · Sicredi -->
-<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Sicredi">
+<section id="s-capa-sicredi" class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Sicredi">
   <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/sicredi.jpg" data-lazy-m="assets/img/capas/sicredi-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
@@ -1418,7 +1429,7 @@
 </section>
 
 <!-- 29 ─ Capa · Magalu -->
-<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Magalu">
+<section id="s-capa-magalu" class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Magalu">
   <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/magalu.jpg" data-lazy-m="assets/img/capas/magalu-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
@@ -1684,7 +1695,7 @@
 </section>
 
 <!-- 33 ─ Capa · Keeta -->
-<section class="slide" style="--escuro:.63" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Keeta">
+<section id="s-capa-keeta" class="slide" style="--escuro:.63" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Keeta">
   <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/keeta.jpg" data-lazy-m="assets/img/capas/keeta-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
@@ -1965,7 +1976,7 @@
 </section>
 
 <!-- 37 ─ Capa · Bridgestone -->
-<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Bridgestone">
+<section id="s-capa-bridgestone" class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Bridgestone">
   <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/bridgestone.jpg" data-lazy-m="assets/img/capas/bridgestone-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
@@ -2102,7 +2113,7 @@
 </section>
 
 <!-- 39 ─ Capa · Multiplan -->
-<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Multiplan">
+<section id="s-capa-multiplan" class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Multiplan">
   <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/multiplan.jpg" data-lazy-m="assets/img/capas/multiplan-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
@@ -2419,8 +2430,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=246"></script>
-<script src="js/i18n-dic.js?v=246"></script>
-<script src="js/i18n.js?v=246"></script>
+<script src="js/deck.js?v=247"></script>
+<script src="js/i18n-dic.js?v=247"></script>
+<script src="js/i18n.js?v=247"></script>
 </body>
 </html>

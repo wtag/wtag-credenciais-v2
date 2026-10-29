@@ -552,6 +552,25 @@ html,body{background:var(--letterbox,#000)}
 .s14__legenda{position:absolute;left:35.4px;bottom:35.8px;font-family:var(--font-sans);font-weight:500;
   font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--creme-55);z-index:7}
 
+/* ── índice de clientes no divisor de CASES ────────────────────────────────
+   A palavra CASES ocupa de 231 a 848 (topo da maiúscula + 617 de altura). O
+   índice entra abaixo, em 906, e termina em 962 — sobram 82 até o topo do HUD,
+   em 1044. Alinhado às mesmas margens da palavra: 48 a 1872.
+
+   Nesta primeira versão são só caixas de traçado com o nome. O preenchimento
+   no hover reusa o --acento do slide, como a pílula de navegação do topo. */
+.cases-idx{position:absolute;left:48px;top:906px;width:1824px;height:56px;
+  display:flex;align-items:center;justify-content:center;gap:16px;z-index:6}
+.cases-idx__b{display:inline-flex;align-items:center;justify-content:center;
+  height:56px;padding:0 30px;border-radius:999px;box-sizing:border-box;
+  font-family:var(--font-sans);font-weight:500;font-size:14px;letter-spacing:.14em;
+  text-transform:uppercase;white-space:nowrap;
+  color:var(--creme-72);background:none;
+  border:1px solid rgba(247,249,234,.3);cursor:pointer;
+  transition:color 180ms ease,background 180ms ease,border-color 180ms ease}
+.cases-idx__b:hover{color:var(--preto-wt);background:var(--laranja-wt);
+  border-color:var(--laranja-wt)}
+
 /* 15 — marcas parceiras (mural orgânico) */
 .s15__logo{position:absolute;display:grid;place-items:center;opacity:0;transform:scale(.9)}
 /* width/height em 100%, não max-width. Com max-* a imagem só é LIMITADA pela
