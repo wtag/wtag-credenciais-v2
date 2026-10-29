@@ -150,9 +150,14 @@ html,body{background:var(--letterbox,#000)}
    competir com a marca ao lado. Fica no fluxo do .marca--tl, então acompanha a
    posição dele em qualquer slide. data-nonav no HTML impede que o clique seja
    lido como avanço de slide. */
-.pilula-nav{margin-left:12px;display:inline-flex;align-items:center;vertical-align:middle;
-  padding:3px 11px 4px;border-radius:999px;
-  font-family:var(--font-sans);font-weight:500;font-size:9.5px;letter-spacing:.14em;
+/* A pilula nasceu como etiqueta de 21 de altura, para ser lida e nao clicada.
+   Virou o unico caminho de volta ao indice de cases, entao passou a ser alvo
+   de mouse: corpo de 9,5 para 12, recuo de 3/11 para 9/18, o que leva a altura
+   de 21 para 35. Continua menor que o "CREDENCIAIS" ao lado, que e quem manda
+   na linha. */
+.pilula-nav{margin-left:16px;display:inline-flex;align-items:center;vertical-align:middle;
+  padding:9px 18px 10px;border-radius:999px;
+  font-family:var(--font-sans);font-weight:500;font-size:12px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--creme-72);
   background:rgba(247,249,234,.09);
   border:1px solid rgba(247,249,234,.2);

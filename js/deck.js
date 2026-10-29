@@ -1091,6 +1091,15 @@
       case ' ': e.preventDefault(); abrirSumario(); break;
       case 'Escape': e.preventDefault(); abrirSumario(); break;
       case 'f': case 'F': e.preventDefault(); alternarTelaCheia(); break;
+      // C volta ao índice de cases, o mesmo destino da pílula do topo.
+      // Só age se o divisor existir: em outro deck a tecla não faz nada
+      // em vez de estourar.
+      case 'c': case 'C': {
+        var divisor = document.getElementById('s-divisor-cases');
+        var iDiv = divisor ? slides.indexOf(divisor) : -1;
+        if (iDiv >= 0) { e.preventDefault(); irPara(iDiv); }
+        break;
+      }
       default:
         if (/^[0-9]$/.test(k)) {
           e.preventDefault();

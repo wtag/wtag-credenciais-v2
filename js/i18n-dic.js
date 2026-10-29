@@ -300,6 +300,7 @@ window.DIC_EN = {
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
 'Capa · Sicredi': 'Cover · Sicredi',
+'Voltar ao índice de cases': 'Back to the case index',
 'Aposte em você · sua melhor aposta é ser Influenciador Magalu': 'Bet on yourself · your best bet is being an Influenciador Magalu',
 'Sua melhor aposta é ser Influenciador Magalu': 'Your best bet is being an Influenciador Magalu',
 'Não conte com a sorte': "Don't count on luck",
