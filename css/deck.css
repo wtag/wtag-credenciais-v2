@@ -156,14 +156,18 @@ html,body{background:var(--letterbox,#000)}
    de 21 para 35. Continua menor que o "CREDENCIAIS" ao lado, que e quem manda
    na linha. */
 .pilula-nav{margin-left:16px;display:inline-flex;align-items:center;vertical-align:middle;
-  padding:9px 18px 10px;border-radius:999px;
-  font-family:var(--font-sans);font-weight:500;font-size:12px;letter-spacing:.12em;
+  padding:11px 22px 12px;border-radius:999px;
+  font-family:var(--font-sans);font-weight:500;font-size:13px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--creme-72);
   background:rgba(247,249,234,.09);
   border:1px solid rgba(247,249,234,.2);
   -webkit-backdrop-filter:blur(14px) saturate(1.2);
   backdrop-filter:blur(14px) saturate(1.2);
   transition:color 180ms ease,background 180ms ease,border-color 180ms ease}
+/* Nas telas de case ela e o unico conteudo da marca do topo — sem o
+   "Credenciais" ao lado, o recuo de 16 a empurraria para fora da margem
+   de 35,4 que alinha o resto do deck. */
+.pilula-nav:first-child{margin-left:0}
 .pilula-nav:hover{color:var(--preto-wt);background:var(--acento,var(--laranja-wt));
   border-color:var(--acento,var(--laranja-wt))}
 .pilula-nav:focus-visible{outline:2px solid var(--acento,var(--laranja-wt));outline-offset:2px}
