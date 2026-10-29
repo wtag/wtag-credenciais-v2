@@ -567,11 +567,18 @@ html,body{background:var(--letterbox,#000)}
    e o espaco e o fio sob cada logo.
 
    A palavra fica CENTRADA contra o bloco do indice, e o numero saiu de
-   medicao, nao de conta. A lista ocupa de 154 a 931, centro em 542,5. A tinta
-   de CASES mede 360 e nao os 341 da maiuscula, porque o tracado reforcado
-   engorda a letra e as curvas do C e do S passam da linha em cima e embaixo.
-   Centrando a TINTA, ela vai de 362,5 a 722,5, o que poe o topo da maiuscula
-   em 373,5.
+   medicao, nao de conta. A tinta de CASES mede 360 e nao os 341 da maiuscula,
+   porque o tracado reforcado engorda a letra e as curvas do C e do S passam da
+   linha em cima e embaixo.
+
+   Com 14 cases a caixa da lista vai de 150 a 980, mas a TINTA dela vai de 154
+   a 965 — a ultima linha tem folga abaixo do texto. Centrando tinta contra
+   tinta, o centro e 559,5 e o topo da maiuscula fica em 390,5.
+
+   ATENCAO: esse numero depende de quantos cases existem. Cada linha nova
+   empurra a base da lista em 34 e o centro em 17 — ao incluir ou tirar um
+   case, remeca a lista e recalcule, senao a palavra fica fora de eixo. E
+   meca a TINTA, nao a caixa: dao 5,5 de diferenca.
 
    Lista: 5 cabecalhos de 40 com 10 de respiro, 13 linhas de 34 e 4 intervalos
    de 26 entre grupos = 788, de 150 a 938, encostada na margem direita (1452 a

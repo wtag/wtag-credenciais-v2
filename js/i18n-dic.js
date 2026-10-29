@@ -300,6 +300,26 @@ window.DIC_EN = {
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
 'Capa · Sicredi': 'Cover · Sicredi',
+'Crias do Corre': 'Crias do Corre',
+/* ---- Keeta · Crias do Corre: o case veio do projeto wtag-cases em 29.10.
+   As entradas foram portadas de la sem reescrita, para o ingles sair
+   igual ao daquele deck. ---- */
+'Keeta · Crias do Corre': 'Keeta · Crias do Corre',
+'Crias do Corre · Escola de criação de conteúdo dos entregadores parceiros Keeta': 'Crias do Corre · Keeta’s content-creation school for partner couriers',
+'Posts de lançamento': 'Launch posts',
+'A Keeta precisava criar uma conexão real com seus entregadores parceiros, fortalecendo o cuidado e abrindo oportunidades para quem está todo dia nas ruas.': 'Keeta needed a real connection with its partner couriers, strengthening care and opening opportunities for those on the streets every day.',
+'A Keeta precisava criar uma conexão real e gerar impacto positivo na rotina dos seus entregadores parceiros, fortalecendo o cuidado e abrindo novas oportunidades para quem está diariamente nas ruas.': 'Keeta needed to build a real connection and have a positive impact on the routine of its partner couriers, strengthening care and opening new opportunities for those who are on the streets every day.',
+'O corre diário já é cheio de histórias reais. Faltavam técnica e ferramentas para transformar a rotina em conteúdo de valor e em nova fonte de renda nas redes.': 'The daily hustle is already full of real stories. What was missing were the skills and tools to turn that routine into valuable content and a new source of income on social.',
+'O corre diário do entregador parceiro já é repleto de histórias e narrativas reais. Faltavam apenas o conhecimento técnico e as ferramentas certas para transformar a rotina de entregas em conteúdo de valor e em uma nova fonte de renda/oportunidade nas redes.': "A partner courier's daily hustle is already full of real stories. All that was missing was the technical know-how and the right tools to turn the delivery routine into valuable content and a new source of income and opportunity on social.",
+'Com a Digital Favela, lançamos o “Crias do Corre”: curso gratuito de criação de conteúdo em 4 módulos para entregadores, impulsionado por um filme manifesto.': 'With Digital Favela, we launched “Crias do Corre”: a free 4-module content-creation course for couriers, boosted by a manifesto film.',
+'Idealizado e executado pela WT.AG (em parceria com a Digital Favela), lançamos o “Crias do Corre”: um curso gratuito de criação de conteúdo em 4 módulos voltado aos entregadores parceiros. A iniciativa ensina na prática a transformar vivências de rua em conteúdo digital, impulsionada por um filme manifesto e estratégia de amplificação em redes.': 'Conceived and executed by WT.AG (in partnership with Digital Favela), we launched “Crias do Corre”: a free 4-module content-creation course for partner couriers. It teaches, hands-on, how to turn street experience into digital content, boosted by a manifesto film and a social amplification strategy.',
+'Keeta · Crias do Corre — manifesto': 'Keeta · Crias do Corre — manifesto',
+'Cena do filme manifesto Crias do Corre': 'Scene from the Crias do Corre manifesto film',
+'Entregador parceiro gravando conteúdo': 'Partner courier recording content',
+'Keeta · Crias do Corre · imagem 1': 'Keeta · Crias do Corre · image 1',
+'Keeta · Crias do Corre · imagem 2': 'Keeta · Crias do Corre · image 2',
+'Keeta · Crias do Corre · imagem 3': 'Keeta · Crias do Corre · image 3',
+
 'Voltar ao índice de cases': 'Back to the case index',
 'Aposte em você · sua melhor aposta é ser Influenciador Magalu': 'Bet on yourself · your best bet is being an Influenciador Magalu',
 'Sua melhor aposta é ser Influenciador Magalu': 'Your best bet is being an Influenciador Magalu',
