@@ -606,7 +606,20 @@ html,body{background:var(--letterbox,#000)}
   transition:color 180ms ease,padding-left 180ms ease}
 .cases-idx__b:hover{color:var(--laranja-wt);padding-left:6px}
 
-/* 15 — marcas parceiras (mural orgânico) */
+/* 15 — marcas parceiras (grade 4x4)
+   Os dezesseis logos sao equalizados por AREA DE TINTA em 2.400px², medida
+   sobre a caixa do arquivo. Treze caem exatos; Odontoprev, Calvin Klein e
+   Nurnberg travam na largura da celula.
+
+   Uma excecao, anotada porque vai parecer inconsistente para quem ler a conta:
+   o BRIDGESTONE nao segue os 2.400. Ele e quase o dobro mais denso que a media
+   (0,57 de tinta por caixa contra ~0,28), entao igualar a tinta encolhia a
+   caixa dele para 180x23 — a menor da grade, 56% da area mediana, e lia como
+   um logo esquecido menor que os vizinhos. Voltou aos 207,2x27,1 que tinha no
+   mural feito a mao. Em tinta ele fica em 3.200, mas em PRESENCA fica junto
+   dos outros, que e o que o olho compara numa grade.
+   O Movado esta na mesma situacao (0,54 de densidade, caixa de 4.440) e pode
+   precisar do mesmo tratamento. */
 .s15__logo{position:absolute;display:grid;place-items:center;opacity:0;transform:scale(.9)}
 /* width/height em 100%, não max-width. Com max-* a imagem só é LIMITADA pela
    caixa: se o arquivo for menor que ela, pinta no tamanho natural e o layout
