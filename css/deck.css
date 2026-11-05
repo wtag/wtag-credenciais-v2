@@ -611,9 +611,10 @@ html,body{background:var(--letterbox,#000)}
 /* width/height em 100%, não max-width. Com max-* a imagem só é LIMITADA pela
    caixa: se o arquivo for menor que ela, pinta no tamanho natural e o layout
    deixa de valer. Os dezesseis logotipos deitados têm arquivo maior que a caixa,
-   então nunca caiu nesse caso; o brasão do Legacy caiu, depois que remover o
-   branco encolheu a tinta de 120x94 para 90x81 e a caixa passou a ser 94,9x85,4.
-   Ele pintava 5% menor que o lugar dele. Aqui quem manda é a caixa. */
+   então nunca caiu nesse caso. Um brasão que saiu do mural em 05.11 caiu:
+   remover o branco encolheu a tinta de 120x94 para 90x81, a caixa passou a ser
+   94,9x85,4 e ele pintava 5% menor que o lugar dele. Aqui quem manda é a
+   caixa. */
 .s15__logo img{width:100%;height:100%;object-fit:contain}
 
 /* ══════════════════════════════════════════════════════════════════════════
