@@ -561,35 +561,41 @@ html,body{background:var(--letterbox,#000)}
 .s14__legenda{position:absolute;left:35.4px;bottom:35.8px;font-family:var(--font-sans);font-weight:500;
   font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--creme-55);z-index:7}
 
-/* ── índice de cases no divisor · lista unica a direita ───────────────────
-   CASES na base, a esquerda; os cinco clientes empilhados numa coluna so, a
-   direita. Sem fio vertical e sem fio entre as linhas: o que separa os grupos
-   e o espaco e o fio sob cada logo.
+/* ── índice de cases no divisor ───────────────────────────────────────────
+   CASES a esquerda e, a direita, os clientes em duas colunas de lista: logo,
+   um fio, e os cases como linhas de texto. Sem molduras e sem fios entre as
+   linhas — o que agrupa e o espaco entre um cliente e o proximo.
 
-   A palavra fica CENTRADA contra o bloco do indice, e o numero saiu de
-   medicao, nao de conta. A tinta de CASES mede 360 e nao os 341 da maiuscula,
-   porque o tracado reforcado engorda a letra e as curvas do C e do S passam da
-   linha em cima e embaixo.
+   HORIZONTAL. O bloco ocupa 1160 a 1872: duas colunas de 340 com 32 de
+   intervalo. Cabe porque o rotulo mais largo, SEU PNEU DE CARRO NOVO, mede
+   ~170 a 13px. Ha folga para um nome maior, mas nao muita — se um case novo
+   tiver titulo longo, confira se ele nao quebra em duas linhas.
 
-   Em duas colunas a TINTA da lista vai de 147 a 643, centro em 395. A de CASES
-   mede 321 de altura, entao centrada ela vai de 234,5 a 555,5 — topo da
-   maiuscula em 243,5, com o corpo em 428.
+   Sao colunas de TEXTO (column-count), nao grade. Numa grade de duas colunas
+   os grupos encheriam linha a linha e cada faixa ficaria com a altura do maior
+   grupo dela, abrindo buracos. Com column-count eles escorrem na vertical e se
+   equilibram sozinhos; break-inside:avoid impede que um cliente se parta.
 
-   ATENCAO, duas dependencias: o CORPO sai da largura disponivel (a palavra nao
-   quebra, e a 869 ela mede 1824), e a POSICAO sai da altura da lista. Incluir
-   um cliente mexe nas duas — o indice cresce e pode empurrar a coluna do
-   titulo. Remeca e recalcule; e meca a TINTA, nao a caixa.
+   VERTICAL. Comeca em 150. Com seis clientes e 16 cases, a coluna mais alta
+   fecha por volta de 660. Em uma coluna so isso daria 974 e terminaria em
+   1124, por cima do HUD, que comeca em 1044 — foi o que obrigou as duas.
 
-   Lista: 5 cabecalhos de 40 com 10 de respiro, 13 linhas de 34 e 4 intervalos
-   de 26 entre grupos = 788, de 150 a 938, encostada na margem direita (1452 a
-   1872). Os intervalos subiram de 22 para 26 porque, sem os fios, e so o
-   espaco que agrupa.
+   CASES. O corpo sai da largura disponivel, porque a palavra nao quebra: a 869
+   ela mede 1824, entao em ~1050 o corpo e 500. A posicao sai da altura da
+   lista, centrando TINTA contra TINTA — a tinta da palavra mede mais que a
+   maiuscula, porque o tracado reforcado engorda a letra e as curvas do C e do
+   S passam da linha em cima e embaixo.
+
+   ATENCAO: incluir ou tirar um cliente mexe nas duas coisas. A lista muda de
+   altura (reposiciona a palavra) e pode mudar de largura (redimensiona a
+   palavra). Remeca as duas, e meca a tinta, nao a caixa.
 
    Logos equalizados por AREA DE TINTA em 800px², medidos sobre a caixa do
    ARQUIVO e dimensionados pela proporcao do arquivo. O Bridgestone e quem
-   denuncia o erro contrario: viewBox 5:1 contra tinta 8:1. */
-.cases-idx{position:absolute;left:992px;top:150px;width:880px;
-  column-count:2;column-gap:40px;z-index:6}
+   denuncia o erro contrario: viewBox 5:1 contra tinta 8:1 — por isso o indice
+   usa bridgestone-justo.svg, com o viewBox cortado na tinta. */
+.cases-idx{position:absolute;left:1160px;top:150px;width:712px;
+  column-count:2;column-gap:32px;z-index:6}
 .cases-idx__col{display:flex;flex-direction:column;gap:0;
   break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:26px}
 .cases-idx__cli{display:flex;align-items:flex-end;width:100%;box-sizing:border-box;
