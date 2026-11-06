@@ -2086,6 +2086,11 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
    com saturação e a sombra interna de 1px no topo, que é o que dá a impressão
    de espessura. Raio 31 = 24% de 128, a menor dimensão da caixa (regra 2.5).
    As caixas são flex, então três ou quatro números se resolvem sozinhos. */
+/* nota de fonte das capas de cliente: mesma funcao do .we-nota do slide 04,
+   mas sobre fundo escuro. Entra abaixo da regua de numeros, que termina em
+   948, e acima do HUD, que comeca em 1044. */
+.capa-cli__fonte{font-family:var(--font-sans);font-weight:300;font-size:12px;
+  letter-spacing:.02em;color:var(--creme-35);z-index:5}
 .capa-cli__nums{position:absolute;left:72px;top:820px;width:1776px;height:128px;
   display:flex;gap:24px;z-index:5}
 .capa-cli__num{flex:1 1 0;min-width:0;border-radius:31px;padding:0 30px;

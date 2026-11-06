@@ -300,6 +300,35 @@ window.DIC_EN = {
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
 'Capa · Sicredi': 'Cover · Sicredi',
+/* ---- Odontoprev · Dia das Maes: o case veio do v1 em 06.11, com as
+   entradas portadas de la sem reescrita. ---- */
+'Desafio': 'Challenge',
+'Execução': 'Execution',
+'Transmitir a emoção da data e construir um filme com o qual o público se identificasse, usando inteligência artificial sem cair num resultado engessado e sem vida, com baixo custo de produção.': 'Convey the emotion of the occasion and build a film the audience could see itself in, using artificial intelligence without ending up with something stiff and lifeless — on a low production budget.',
+'Transmitir toda a emoção da data, criando uma conexão com a Odontoprev, além de construir um filme criativo, que contasse uma história com a qual o público se identificasse, usando inteligência artificial e superando a limitação de torná-la emocional, fugindo de um resultado que pudesse parecer engessado e sem vida, dentro de um contexto de baixo custo de produção.': 'Convey the full emotion of the occasion and build a connection with Odontoprev, while making a creative film that told a story the audience could see itself in. All of it with artificial intelligence, overcoming its difficulty with genuine emotion and avoiding a result that might feel stiff and lifeless — and all on a low production budget.',
+'Ilustrar o conceito “Toda mãe nasce no dia mais feliz da sua vida”: mãe e filho brincam com massinha e a realidade se mistura com o imaginário, conduzida pela narração dela.': 'Illustrate the idea that “every mother is born on the happiest day of her life”: a mother and son play with modelling clay and reality blurs into imagination, carried by her narration.',
+'A I.A como ferramenta para uma história cheia de afeto. A massinha de modelar trouxe o calor do que é feito à mão, remetendo ao cuidado e à infância — tudo em apenas uma semana.': 'AI as a tool in service of a story full of affection. The modelling clay brought the warmth of something made by hand, evoking care and childhood — all of it in a single week.',
+'Utilizamos a inteligência artificial como uma ferramenta para dar vida a uma história cheia de afeto, evitando aquele visual frio e robótico. A escolha da massinha de modelar foi estratégica para trazer o calor do que é feito à mão, remetendo ao cuidado e à infância. Em apenas uma semana, a tecnologia serviu como ferramenta para dar vida a uma história emocionante e real entre mãe e filho.': 'We used artificial intelligence as a tool to bring a story full of affection to life, steering clear of that cold, robotic look. Modelling clay was a deliberate choice: it carries the warmth of something made by hand and evokes care and childhood. In a single week, the technology served a story that felt moving and real between a mother and her son.',
+'Odontoprev · Dia das Mães — videocase': 'Odontoprev · Mother’s Day — video case',
+'Cena do filme Dia das Mães': 'Scene from the Mother’s Day film',
+'Cena em massinha de modelar entre mãe e filho': 'Modelling-clay scene between mother and son',
+'Odontoprev · imagem 1': 'Odontoprev · image 1',
+'Odontoprev · imagem 2': 'Odontoprev · image 2',
+'Odontoprev · imagem 3': 'Odontoprev · image 3',
+'Stop<br>motion': 'Stop<br>motion',
+'De produção': 'Of production',
+'Massinha 3D': '3D clay',
+'Stop': 'Stop',
+'motion': 'motion',
+
+'+9,5 mi': '+9.5m',
+'+27 mil': '+27k',
+'+2.400': '+2,400',
+'beneficiários': 'members',
+'dentistas credenciados': 'accredited dentists',
+'municípios': 'municipalities',
+'anos de história': 'years of history',
+'Beneficiários e rede: resultados do 2º trimestre de 2026 e campanha institucional dos 39 anos.': 'Members and network: second-quarter 2026 results and the 39th-anniversary institutional campaign.',
 /* ---- Odontoprev: a capa e os dois cases vieram do projeto wtag-cases em
    06.11. As entradas dos cases foram portadas de la sem reescrita. ---- */
 'Odontoprev': 'Odontoprev',
