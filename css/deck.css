@@ -571,14 +571,14 @@ html,body{background:var(--letterbox,#000)}
    porque o tracado reforcado engorda a letra e as curvas do C e do S passam da
    linha em cima e embaixo.
 
-   Com 14 cases a caixa da lista vai de 150 a 980, mas a TINTA dela vai de 154
-   a 965 — a ultima linha tem folga abaixo do texto. Centrando tinta contra
-   tinta, o centro e 559,5 e o topo da maiuscula fica em 390,5.
+   Em duas colunas a TINTA da lista vai de 147 a 643, centro em 395. A de CASES
+   mede 321 de altura, entao centrada ela vai de 234,5 a 555,5 — topo da
+   maiuscula em 243,5, com o corpo em 428.
 
-   ATENCAO: esse numero depende de quantos cases existem. Cada linha nova
-   empurra a base da lista em 34 e o centro em 17 — ao incluir ou tirar um
-   case, remeca a lista e recalcule, senao a palavra fica fora de eixo. E
-   meca a TINTA, nao a caixa: dao 5,5 de diferenca.
+   ATENCAO, duas dependencias: o CORPO sai da largura disponivel (a palavra nao
+   quebra, e a 869 ela mede 1824), e a POSICAO sai da altura da lista. Incluir
+   um cliente mexe nas duas — o indice cresce e pode empurrar a coluna do
+   titulo. Remeca e recalcule; e meca a TINTA, nao a caixa.
 
    Lista: 5 cabecalhos de 40 com 10 de respiro, 13 linhas de 34 e 4 intervalos
    de 26 entre grupos = 788, de 150 a 938, encostada na margem direita (1452 a
@@ -588,10 +588,10 @@ html,body{background:var(--letterbox,#000)}
    Logos equalizados por AREA DE TINTA em 800px², medidos sobre a caixa do
    ARQUIVO e dimensionados pela proporcao do arquivo. O Bridgestone e quem
    denuncia o erro contrario: viewBox 5:1 contra tinta 8:1. */
-.cases-idx{position:absolute;left:1452px;top:150px;width:420px;
-  display:grid;grid-template-columns:1fr;gap:26px 0;z-index:6;
-  align-items:start}
-.cases-idx__col{display:flex;flex-direction:column;gap:0}
+.cases-idx{position:absolute;left:992px;top:150px;width:880px;
+  column-count:2;column-gap:40px;z-index:6}
+.cases-idx__col{display:flex;flex-direction:column;gap:0;
+  break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:26px}
 .cases-idx__cli{display:flex;align-items:flex-end;width:100%;box-sizing:border-box;
   height:40px;padding:0 0 10px;margin-bottom:10px;background:none;
   border:0;border-bottom:1px solid rgba(247,249,234,.3);
@@ -1305,6 +1305,31 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
    na altura disponível. Esticá-la obrigaria o herói a 2,16:1. Então o que
    cresce é o respiro entre as duas colunas, não a mídia. */
 .case--sem-kpis .case__media{left:868px}
+
+/* ── case com filme vertical e TRÊS stills empilhados ao lado ─────────────
+   Arranjo trazido do projeto wtag-cases junto com os dois cases da Odontoprev,
+   que nasceram nele: filme 9:16 de altura cheia a esquerda e tres fotos numa
+   coluna a direita.
+
+   O nome e --vert-pilha e nao --vert1 de proposito. Aquele projeto chama este
+   arranjo de .case--vert1, mas AQUI esse nome ja esta ocupado por outra coisa
+   — o do Influenciador Magalu, que tem o filme menor no alto, duas fotos ao
+   lado e uma faixa de tres embaixo. Importar com o nome original faria os
+   cases da Odontoprev pegarem a geometria errada, e sem erro nenhum: eles
+   simplesmente apareceriam fora do lugar, porque a regra de ca existe e casa.
+   Dois decks, o mesmo nome, layouts diferentes. */
+.case.case--vert-pilha .case__media{flex-direction:row;gap:24px;height:870px}
+.case.case--vert-pilha .case__video{width:489.4px;height:870px;flex:none}
+.case.case--vert-pilha .case__stack{flex:none;width:466.6px;height:870px;
+  flex-direction:column;gap:22px}
+.case.case--vert-pilha .case__stack > .case__img{flex:1 1 0;min-height:0;width:100%}
+/* entrada: as tres abrem de uma faixa vertical colada ao filme, o espelho da
+   faixa horizontal da pilha padrao */
+.case.case--vert-pilha .case__stack > [data-enter="expande"]:nth-child(1){clip-path:inset(6% 74% 62% 6% round 28px)}
+.case.case--vert-pilha .case__stack > [data-enter="expande"]:nth-child(2){clip-path:inset(34% 74% 34% 6% round 28px)}
+.case.case--vert-pilha .case__stack > [data-enter="expande"]:nth-child(3){clip-path:inset(62% 74% 6% 6% round 28px)}
+.case.case--vert-pilha.is-played .case__stack > [data-enter="expande"]:nth-child(n){
+  clip-path:inset(0 0 0 0 round 28px)}
 
 /* ── case vertical com TRÊS peças ──────────────────────────────────────────
    O Horóscopo do Golpe só existe em 9:16, como a Bridgestone, mas são três
