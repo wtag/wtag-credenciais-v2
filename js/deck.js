@@ -19,7 +19,31 @@
   /* `:not([data-oculto])` é o que tira um slide da apresentação sem apagá-lo.
      data-oculto tira um slide da navegação sem apagá-lo do HTML: voltar é
      remover o atributo. */
+
+  /* Recorte por link: `?sem=we` (ou `?sem=we,time`) tira atos inteiros da
+     navegação marcando os slides com data-oculto antes da contagem. É o que
+     faz a versão "Sem Grupo WE" (sem-grupo-we.html) sem duplicar o HTML: uma
+     cópia divergiria na primeira edição do deck. */
+  var semAtos = (/[?&]sem=([^&#]*)/.exec(location.search) || [])[1];
+  if (semAtos) {
+    decodeURIComponent(semAtos).split(',').forEach(function (k) {
+      k = k.trim();
+      if (!k) return;
+      [].forEach.call(document.querySelectorAll('.slide[data-ato="' + k + '"]'), function (s) {
+        s.setAttribute('data-oculto', '');
+      });
+    });
+    if (/(^|,)\s*we\s*(,|$)/.test(decodeURIComponent(semAtos))) {
+      document.title = 'Credenciais V2 - Sem Grupo We';
+    }
+  }
+
   var slides   = [].slice.call(document.querySelectorAll('.slide:not([data-oculto])'));
+
+  /* "Ir direto para uma tela: 1…N" na capa acompanha o total real. */
+  [].forEach.call(document.querySelectorAll('.capa__nav kbd'), function (k) {
+    if (/^\d+$/.test(k.textContent) && k.textContent !== '1') k.textContent = slides.length;
+  });
 
   /* Nomes dos atos. Vivem aqui e não no DOM, então o i18n não os alcança
      percorrendo elementos — a tradução é consultada na hora de escrever. */
