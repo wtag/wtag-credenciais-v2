@@ -20,22 +20,23 @@
      data-oculto tira um slide da navegação sem apagá-lo do HTML: voltar é
      remover o atributo. */
 
-  /* Recorte por link: `?sem=we` (ou `?sem=we,time`) tira atos inteiros da
-     navegação marcando os slides com data-oculto antes da contagem. É o que
-     faz a versão "Sem Grupo WE" (sem-grupo-we.html) sem duplicar o HTML: uma
-     cópia divergiria na primeira edição do deck. */
+  /* Recorte por link: `?sem=intro` tira o ato de abertura institucional
+     (slides 02 a 06) da navegação, marcando-os com data-oculto antes da
+     contagem. É o que serve o sem-intro.html sem duplicar o HTML: uma cópia
+     divergiria na primeira edição do deck. O link é "intro" e não o nome do
+     ato de propósito: a URL é vista pelo cliente. Também aceita o nome do ato
+     direto (`?sem=time`, `?sem=we,time`). */
+  var APELIDOS = { intro: 'we' };
   var semAtos = (/[?&]sem=([^&#]*)/.exec(location.search) || [])[1];
   if (semAtos) {
     decodeURIComponent(semAtos).split(',').forEach(function (k) {
       k = k.trim();
+      k = APELIDOS[k] || k;
       if (!k) return;
       [].forEach.call(document.querySelectorAll('.slide[data-ato="' + k + '"]'), function (s) {
         s.setAttribute('data-oculto', '');
       });
     });
-    if (/(^|,)\s*we\s*(,|$)/.test(decodeURIComponent(semAtos))) {
-      document.title = 'Credenciais V2 - Sem Grupo We';
-    }
   }
 
   var slides   = [].slice.call(document.querySelectorAll('.slide:not([data-oculto])'));
